@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import Profile from './components/Profile';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
@@ -11,7 +9,7 @@ function App() {
     <>
       <div>
         <nav>
-          <ul>
+          <ul className="flex space-x-6 justify-center">
             <li>
               <a href="#About">About Me</a>
             </li>
