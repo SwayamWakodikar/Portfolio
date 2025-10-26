@@ -3,27 +3,15 @@ import Profile from './components/Profile';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-
+import Navbar from './components/navbar';
 function App() {
   return (
     <>
       <div>
-        <nav>
-          <ul className="flex space-x-6 justify-center">
-            <li>
-              <a href="#About">About Me</a>
-            </li>
-            <li>
-              <a href="#Projects">Projects</a>
-            </li>
-            <li>
-              <a href="#Experience">Experience</a>
-            </li>
-            <li>
-              <a href="#Contact">Contact Me</a>
-            </li>
-          </ul>
-        </nav>
+        <Navbar />
+      </div>
+      <div className='mt-36'>
+
       </div>
       <div id="About">
         <Profile />
