@@ -17,6 +17,7 @@ const Profile = () => {
         <br />
         Developer | Electronics Geek
     </div>
+    {/* Add Skill tab here */}
     <div>
       
     </div>
