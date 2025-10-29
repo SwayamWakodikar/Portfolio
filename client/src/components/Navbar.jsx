@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-blue-100/50 backdrop-blur-md shadow-xl rounded-full flex items-center justify-between px-10 py-4 z-50 border border-gray-200">
+    <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-100/50 backdrop-blur-md shadow-xl rounded-full flex items-center justify-between px-10 py-4 z-50 border border-gray-200">
       <h1 className="text-2xl font-bold text-gray-800">
         Swayam Wakodikar | Portfolio
       </h1>
