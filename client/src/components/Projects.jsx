@@ -4,36 +4,36 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce application with user authentication, product management, and payment integration. Built with React, Node.js, and MongoDB.",
+      title: "Your Ledger",
+      description: "YourLedger — a full-stack finance management app for tracking income, expenses, and transactions. Built with React, Node.js, and MongoDB.",
       tech: ["React", "Node.js", "MongoDB", "Express"],
-      github: "https://github.com",
-      demo: "https://demo.com"
+      github: "https://github.com/SwayamWakodikar/Expense-Tracker.git",
+      demo: "yourledger.vercel.app"
     },
-    {
-      id: 2,
-      title: "Task Management App",
-      description: "Collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      tech: ["React", "Next.js", "Firebase"],
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },
-    {
-      id: 3,
-      title: "Weather Dashboard",
-      description: "Real-time weather dashboard with location-based forecasts, interactive maps, and beautiful data visualizations.",
-      tech: ["JavaScript", "HTML5", "CSS3", "APIs"],
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },
-    {
-      id: 4,
-      title: "Social Media Analytics",
-      description: "Analytics platform for tracking social media metrics with data visualization, export features, and custom reports.",
-      tech: ["Python", "React", "Chart.js"],
-      github: "https://github.com",
-      demo: "https://demo.com"
-    }
+    // {
+    //   id: 2,
+    //   title: "Task Management App",
+    //   description: "Collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
+    //   tech: ["React", "Next.js", "Firebase"],
+    //   github: "https://github.com",
+    //   demo: "https://demo.com"
+    // },
+    // {
+    //   id: 3,
+    //   title: "Weather Dashboard",
+    //   description: "Real-time weather dashboard with location-based forecasts, interactive maps, and beautiful data visualizations.",
+    //   tech: ["JavaScript", "HTML5", "CSS3", "APIs"],
+    //   github: "https://github.com",
+    //   demo: "https://demo.com"
+    // },
+    // {
+    //   id: 4,
+    //   title: "Social Media Analytics",
+    //   description: "Analytics platform for tracking social media metrics with data visualization, export features, and custom reports.",
+    //   tech: ["Python", "React", "Chart.js"],
+    //   github: "https://github.com",
+    //   demo: "https://demo.com"
+    // }
   ]
 
   return (
