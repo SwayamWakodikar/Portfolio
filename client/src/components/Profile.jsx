@@ -4,7 +4,7 @@ import assets from '../assets/assets'
 const Profile = () => {
   return (
 
-    <div className="w-screen min-h-screen py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+    <div className="w-screen min-h-screen py-20 px-4 bg-linear-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto">
         <style>{`
           .shiny-skill {
@@ -18,7 +18,7 @@ const Profile = () => {
             left: -75%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(
+            background: linear-linear(
               120deg, 
               rgba(255,255,255,0) 0%, 
               rgba(255,255,255,0.4) 50%, 
@@ -43,7 +43,7 @@ const Profile = () => {
               className="h-64 w-64 lg:h-80 lg:w-80 rounded-full object-cover border-4 border-green-700 shadow-2xl mb-6"
             />
             <div className="text-center lg:text-left">
-              <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-2">
+              <h1 className="text-3xl lg:text-4xl font-bold bg-linear-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-2">
                 Swayam Wakodikar
               </h1>
               <div className="text-xl lg:text-2xl font-semibold text-gray-700">

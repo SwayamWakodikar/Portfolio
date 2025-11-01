@@ -71,10 +71,10 @@ const Contact = () => {
   ]
 
   return (
-    <div className="w-screen min-h-screen py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+    <div className="w-screen min-h-screen py-20 px-4 bg-linear-to-b from-gray-50 to-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-4">
+          <h2 className="text-5xl font-bold bg-linear-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-4">
             Get In Touch
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -139,7 +139,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="w-full bg-gradient-to-r from-green-700 to-green-900 text-white font-semibold py-3 px-6 rounded-lg hover:from-green-800 hover:to-green-950 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full bg-linear-to-r from-green-700 to-green-900 text-white font-semibold py-3 px-6 rounded-lg hover:from-green-800 hover:to-green-950 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {status === 'sending' ? 'Sending...' : status === 'success' ? 'Message Sent! ✓' : 'Send Message'}
               </button>
@@ -211,7 +211,7 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-700 to-green-900 text-white rounded-lg hover:from-green-800 hover:to-green-950 transition-all duration-300 transform hover:scale-105 font-medium shadow-lg"
+                    className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-green-700 to-green-900 text-white rounded-lg hover:from-green-800 hover:to-green-950 transition-all duration-300 transform hover:scale-105 font-medium shadow-lg"
                   >
                     {social.icon}
                     <span>{social.name}</span>

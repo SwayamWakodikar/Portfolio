@@ -47,10 +47,10 @@ const Experience = () => {
   ]
 
   return (
-    <div className="w-screen min-h-screen py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+    <div className="w-screen min-h-screen py-20 px-4 bg-linear-to-b from-white to-gray-50">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-4">
+          <h2 className="text-5xl font-bold bg-linear-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-4">
             Experience & Education
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -60,7 +60,7 @@ const Experience = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-300 via-green-500 to-green-300 transform md:-translate-x-1/2"></div>
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-green-300 via-green-500 to-green-300 transform md:-translate-x-1/2"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
