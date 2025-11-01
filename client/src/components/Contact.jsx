@@ -52,7 +52,7 @@ const Contact = () => {
     },
     {
       name: 'Email',
-      url: 'mailto:swayam@example.com',
+      url: 'mailto:swayam.w06@gmail.com',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -180,8 +180,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-800 mb-1">Phone</p>
-                    <a href="tel:+1234567890" className="text-green-700 hover:text-green-800 transition-colors">
-                      +1 (234) 567-890
+                    <a href="tel: +91 9764433698" className="text-green-700 hover:text-green-800 transition-colors">
+                      +91 9764433698
                     </a>
                   </div>
                 </div>
