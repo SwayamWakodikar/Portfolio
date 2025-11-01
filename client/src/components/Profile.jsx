@@ -4,9 +4,8 @@ import assets from '../assets/assets'
 const Profile = () => {
   return (
 
-    <div className="w-screen h-auto">
-      <div className="flex justify-between items-center text-4xl font-bold bg-linear-to-r from-green-700 to-green-900 bg-clip-text text-transparent p-4">
-        {/* Profile Image Section - Leftmost Side */}
+    <div className="w-screen min-h-screen py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-7xl mx-auto">
         <style>{`
           .shiny-skill {
             position: relative;
@@ -34,30 +33,44 @@ const Profile = () => {
             transform: skewX(-25deg) translateX(70%);
           }
         `}</style>
-        <div className="flex flex-col items-start ml-4">
-          <img
-            src={assets[0]}
-            alt="Profile"
-            className="h-72 w-72 rounded-full object-cover border-2 border-black"
-          />
-          <div className=" font-bold pb-2 text-4xl mt-2">
-            Student | Tech Enthusiast <br />
-            Developer | Electronics Geek
+        
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12">
+          {/* Profile Image Section */}
+          <div className="flex flex-col items-center lg:items-start w-full lg:w-auto">
+            <img
+              src={assets[0]}
+              alt="Profile"
+              className="h-64 w-64 lg:h-80 lg:w-80 rounded-full object-cover border-4 border-green-700 shadow-2xl mb-6"
+            />
+            <div className="text-center lg:text-left">
+              <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-2">
+                Swayam Wakodikar
+              </h1>
+              <div className="text-xl lg:text-2xl font-semibold text-gray-700">
+                Student | Tech Enthusiast
+              </div>
+              <div className="text-xl lg:text-2xl font-semibold text-gray-700">
+                Developer | Electronics Geek
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className="p-6 rounded-xl text-lg flex flex-col items-start min-w-[330px] ml-auto self-start">
-          <div className="font-bold text-4xl mb-6">Skills</div>
-          <div className="grid text-black grid-cols-3 gap-8 w-full">
-            <div className="cursor-pointer flex items-center w-68 gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
+          {/* Skills Section */}
+          <div className="flex-1 w-full lg:w-auto">
+            <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-gray-200">
+              <div className="font-bold text-3xl lg:text-4xl mb-6 text-gray-800">
+                Skills
+              </div>
+              <div className="grid text-black grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 w-full">
+            <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                alt="JavaScript"
+                alt="HTML5"
                 className="h-8 w-8"
               />
               <span>HTML5</span>
             </div>
-            <div className="cursor-pointer flex items-center w-68 gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
+            <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                 alt="JavaScript"
@@ -76,7 +89,7 @@ const Profile = () => {
             <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-                alt="Python"
+                alt="C"
                 className="h-8 w-8"
               />
               <span>C</span>
@@ -84,7 +97,7 @@ const Profile = () => {
             <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                alt="Python"
+                alt="C++"
                 className="h-8 w-8"
               />
               <span>C++</span>
@@ -92,12 +105,12 @@ const Profile = () => {
             <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                alt="Python"
+                alt="Java"
                 className="h-8 w-8"
               />
               <span>Java</span>
             </div>
-            <div className="flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
+            <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                 alt="React"
@@ -116,7 +129,7 @@ const Profile = () => {
             <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                alt="HTML5"
+                alt="Express"
                 className="h-8 w-8"
               />
               <span>Express</span>
@@ -124,25 +137,25 @@ const Profile = () => {
             <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                alt="HTML5"
+                alt="MongoDB"
                 className="h-8 w-8"
               />
               <span>MongoDB</span>
             </div>
-            <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105  hover:bg-green-800/50 hover:text-white">
+            <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-green-100/50 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-green-800/50 hover:text-white">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                alt="HTML5"
+                alt="Next.js"
                 className="h-8 w-8"
               />
-              <span>NEXT JS</span>
+              <span>Next.js</span>
+            </div>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
   )
 }
 
