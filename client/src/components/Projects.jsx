@@ -88,7 +88,7 @@ const Projects = () => {
                     GitHub
                   </a>
                   <a
-                    href="yourledger.vercel.app"
+                    href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-colors font-medium"
