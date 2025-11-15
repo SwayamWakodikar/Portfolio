@@ -1,3 +1,5 @@
+import Swayam_pic from "client\assets\Swayam_Pic.jpg"
 const assets=[
-    Swayam
+    Swayam_pic,
 ]
+export default assets;
