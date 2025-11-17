@@ -8,7 +8,7 @@ const Projects = () => {
       description: "YourLedger — a full-stack finance management app for tracking income, expenses, and transactions. Built with React, Node.js, and MongoDB.",
       tech: ["React", "Node.js", "MongoDB", "Express"],
       github: "https://github.com/SwayamWakodikar/Expense-Tracker.git",
-      demo: "yourledger.vercel.app"
+      demo: "https://yourledger.vercel.app"
     },
     // {
     //   id: 2,
