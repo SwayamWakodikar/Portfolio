@@ -11,12 +11,12 @@ function App() {
     <>
 <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none bg-black">
   <DotGrid
-    dotSize={10}
+    dotSize={8}
     gap={15}
     // backgroundColor="#000000"
     baseColor="#271e37"
     activeColor="#5227ff"
-    proximity={120}
+    proximity={90}
     shockRadius={250}
     shockStrength={5}
     resistance={750}
@@ -27,8 +27,8 @@ function App() {
       <div>
         <Navbar />
       </div>
-      <div className='mt-32 md:mt-36'></div>
-      <div id="About">
+      {/* <div className='mt-32 md:mt-36'></div> */}
+      <div id="About" className='mt-6'>
         <Reveal>
           <Profile />
         </Reveal>

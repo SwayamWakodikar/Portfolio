@@ -2,3 +2,6 @@
 /* *{
     color: #0062ff7e;
 } */
+ ::-webkit-scrollbar{
+    display: none;
+ }
