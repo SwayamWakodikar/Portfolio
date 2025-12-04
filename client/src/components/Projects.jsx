@@ -37,7 +37,7 @@ const Projects = () => {
   ]
 
   return (
-    <div className="w-screen min-h-screen py-20 px-4 bg-linear-to-b from-gray-50 to-white">
+    <div className="w-screen min-h-screen py-20 px-4 bg-linear-to-b bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold bg-linear-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-4">
