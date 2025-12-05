@@ -83,7 +83,7 @@ const Profile = () => {
                     height="64"
                     src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new--v1.png"
                     alt="Instagram"
-                  /> target="_blank"
+                  />
                 </a>
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=swayam.w06@gmail.com
