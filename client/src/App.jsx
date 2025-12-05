@@ -5,18 +5,18 @@ import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Reveal from './components/Reveal';
 import DotGrid from './components/backgorund/DotGrid';
-
+import Stats from './components/Stats';
 function App() {
   return (
     <>
 <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none bg-black">
   <DotGrid
-    dotSize={8}
+    dotSize={5}
     gap={15}
     // backgroundColor="#000000"
     baseColor="#271e37"
     activeColor="#5227ff"
-    proximity={90}
+    proximity={70}
     shockRadius={250}
     shockStrength={5}
     resistance={750}
@@ -37,6 +37,12 @@ function App() {
       <div className='select-none' id="Projects">
         <Reveal>
           <Projects />
+        </Reveal>
+        
+      </div>
+      <div className='select-none' id="Stats">
+        <Reveal>
+          <Stats />
         </Reveal>
         
       </div>
