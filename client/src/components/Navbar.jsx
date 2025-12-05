@@ -38,11 +38,11 @@ const Navbar = () => {
         <li>
           <a
             draggable="false"
-            href="#Experience"
+            href="#Stats"
             className="text-white hover:text-indigo-300 transition-colors font-medium"
-            onClick={e => handleSmoothScroll(e, 'Experience')}
+            onClick={e => handleSmoothScroll(e, 'Stats')}
           >
-            Experience
+            Stats
           </a>
         </li>
         <li>
