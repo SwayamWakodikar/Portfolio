@@ -10,14 +10,14 @@ const Projects = () => {
       github: "https://github.com/SwayamWakodikar/Expense-Tracker.git",
       demo: "https://yourledger.vercel.app"
     },
-    // {
-    //   id: 2,
-    //   title: "Task Management App",
-    //   description: "Collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    //   tech: ["React", "Next.js", "Firebase"],
-    //   github: "https://github.com",
-    //   demo: "https://demo.com"
-    // },
+    {
+      id: 2,
+      title: "Auth WebApp",
+      description: "A Project Integrating JWT, OAuth on Learning Purpose.",
+      tech: ["React", "MongoDB", "JWT","OAuth","Express","Node.js","Bcrypt"],
+      github: "https://github.com/SwayamWakodikar/Authentication-WebApp.git",
+      demo: "#"
+    },
     // {
     //   id: 3,
     //   title: "Weather Dashboard",

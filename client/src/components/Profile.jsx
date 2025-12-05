@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 const Profile = () => {
   return (
 
-    <div className="w-screen min-h-screen py-20 px-4 bg-transparent">
+    <div className="select-none w-screen min-h-screen py-20 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <style>{`
           .shiny-skill {
@@ -52,6 +52,20 @@ const Profile = () => {
               </div>
               <div className="text-xl lg:text-2xl font-semibold text-indigo-100">
                 Developer | Electronics Geek
+              </div>
+              <div className='text-xl lg:text-2xl font-semibold text-indigo-100 flex items-center gap-4 mt-3'>
+                <a href="https://github.com/SwayamWakodikar" target='_blank'>
+                <img width="64" height="64" src="https://img.icons8.com/glyph-neue/64/FFFFFF/github.png" alt="GitHub"/>
+                </a>
+                <a href="https://leetcode.com/u/swayam_w06/">
+                <img width="64" height="64" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/96/FFFFFF/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-bold-tal-revivo.png" alt="Leetcode"/>
+                </a>
+                <a href="https://x.com/SwayamWakodikar">
+                <img width="64" height="64" src="https://img.icons8.com/ios/50/FFFFFF/twitterx--v2.png" alt="X"/>
+                </a>
+                <a href="https://www.instagram.com/swayam_w06/">
+                <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new--v1.png" alt="Instagram"/>
+                </a>
               </div>
             </div>
           </div>

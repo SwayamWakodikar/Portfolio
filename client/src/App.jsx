@@ -24,7 +24,7 @@ function App() {
   />
 </div>
 
-      <div>
+      <div className='select-none' >
         <Navbar />
       </div>
       {/* <div className='mt-32 md:mt-36'></div> */}
@@ -34,7 +34,7 @@ function App() {
         </Reveal>
         
       </div>
-      <div id="Projects">
+      <div className='select-none' id="Projects">
         <Reveal>
           <Projects />
         </Reveal>
@@ -43,7 +43,7 @@ function App() {
       {/* <div id="Experience">
         <Experience />
       </div> */}
-      <div id="Contact">
+      <div className='select-none' id="Contact">
         
         <Reveal><Contact /></Reveal>
       </div>
