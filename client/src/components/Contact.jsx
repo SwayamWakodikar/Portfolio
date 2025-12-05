@@ -74,22 +74,22 @@ const Contact = () => {
     <div className="w-screen min-h-screen py-20 px-4 bg-linear-to-b bg-transparent">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold bg-linear-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-4">
+          <h2 className="text-5xl font-bold bg-linear-to-r text-indigo-300 bg-clip-text mb-4">
             Get In Touch
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-indigo-100 text-lg max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? I'd love to hear from you!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="items-center">
           {/* Contact Form */}
-          <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Send me a message</h3>
+          <div className=" backdrop-blur-xs rounded-2xl shadow-xl p-8 ">
+            <h3 className="text-center text-4xl font-bold text-blue-100 mb-6">Send me a message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="name" className="font-bold block text-md text-blue-100 mb-2">
                   Name
                 </label>
                 <input
@@ -99,13 +99,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
-                  placeholder="Your name"
+                  className="w-full px-4 py-3  text-gray-200 bg-indigo-100/50 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all"
+                  placeholder="Your name" 
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="email" className="font-bold block text-md text-blue-100 mb-2">
                   Email
                 </label>
                 <input
@@ -115,13 +115,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3  text-gray-200 bg-indigo-100/50 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="message" className="font-bold block text-md text-blue-100 mb-2">
                   Message
                 </label>
                 <textarea
@@ -131,7 +131,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-4 py-3  text-gray-200 bg-indigo-100/50 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all"
                   placeholder="Your message here..."
                 />
               </div>
@@ -153,7 +153,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-8">
+          {/* <div className="space-y-8">
             <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
               
@@ -199,10 +199,10 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Social Links */}
-            <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-gray-200">
+            {/* <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Follow Me</h3>
               <div className="flex flex-wrap gap-4">
                 {socialLinks.map((social) => (
@@ -217,9 +217,9 @@ const Contact = () => {
                     <span>{social.name}</span>
                   </a>
                 ))}
-              </div>
-            </div>
-          </div>
+              </div> */}
+            {/* </div> */}
+          {/* </div> */}
         </div>
       </div>
     </div>

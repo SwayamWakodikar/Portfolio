@@ -66,6 +66,10 @@ const Profile = () => {
                 <a href="https://www.instagram.com/swayam_w06/">
                 <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new--v1.png" alt="Instagram"/>
                 </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=swayam.w06@gmail.com
+" target="_blank">
+                <img width="64" height="64" src="https://img.icons8.com/ios/50/FFFFFF/gmail-new.png" alt="gmail-new"/>
+                </a>
               </div>
             </div>
           </div>
