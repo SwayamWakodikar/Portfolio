@@ -59,7 +59,7 @@ const Profile = () => {
           {/* Skills Section */}
           <div className="flex-1 w-full lg:w-auto">
             <div className=" bg-transparent rounded-2xl shadow-xl p-8 border ">
-              <div className="font-bold text-3xl lg:text-4xl mb-6 text-indigo-100">
+              <div className="font-bold text-3xl lg:text-4xl mb-6 text-indigo-300">
                 Skills
               </div>
               <div className="grid text-white grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 w-full">

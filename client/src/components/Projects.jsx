@@ -40,10 +40,10 @@ const Projects = () => {
     <div className="w-screen min-h-screen py-20 px-4 bg-linear-to-b bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold bg-linear-to-r text-indigo-100 bg-clip-text  mb-4">
+          <h2 className="text-5xl font-bold bg-linear-to-r text-indigo-300 bg-clip-text  mb-4">
             My Projects
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-indigo-100 text-lg max-w-2xl mx-auto">
             A collection of projects showcasing my skills and passion for building innovative solutions
           </p>
         </div>
@@ -52,15 +52,15 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative bg-white/80 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
+              className="group relative  backdrop-blur-xs rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.05]"
             >
-              <div className="absolute inset-0 bg-linear-to-br from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* <div className="absolute inset-0 bg-linear-to-br from-green-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
               
               <div className="relative p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-green-700 transition-colors">
+                <h3 className="text-3xl font-bold text-blue-100 mb-3 group-hover:text-blue-100 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-indigo-100 mb-4 leading-relaxed">
                   {project.description}
                 </p>
                 
@@ -68,7 +68,7 @@ const Projects = () => {
                   {project.tech.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-green-100/50 text-green-800 text-sm font-semibold rounded-full border border-green-200"
+                      className="px-3 py-1 bg-indigo-400 text-black text-sm font-semibold rounded-full "
                     >
                       {tech}
                     </span>
