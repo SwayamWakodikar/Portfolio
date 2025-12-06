@@ -6,9 +6,12 @@ import Navbar from './components/Navbar';
 import Reveal from './components/Reveal';
 import DotGrid from './components/backgorund/DotGrid';
 import Stats from './components/Stats';
+
 function App() {
   return (
+    
     <>
+    
 <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none bg-black">
   <DotGrid
     dotSize={5}
@@ -26,6 +29,7 @@ function App() {
 
       <div className='select-none' >
         <Navbar />
+        
       </div>
       {/* <div className='mt-32 md:mt-36'></div> */}
       <div id="About" className='mt-6'>
@@ -34,6 +38,7 @@ function App() {
         </Reveal>
         
       </div>
+      
       <div className='select-none' id="Projects">
         <Reveal>
           <Projects />
@@ -54,6 +59,7 @@ function App() {
         <Reveal><Contact /></Reveal>
       </div>
     </>
+    
   );
 }
 
