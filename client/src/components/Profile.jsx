@@ -1,6 +1,7 @@
 import React from "react";
 import assets from "../assets/assets.js";
 import { motion } from "motion/react";
+import TextType from "./Text/TextType.jsx";
 
 const Profile = () => {
   return (
@@ -34,7 +35,7 @@ const Profile = () => {
           }
         `}</style>
 
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-start gap-12">
           {/* Profile Image Section */}
           <div className="flex flex-col items-center lg:items-start w-full lg:w-auto">
             <img
@@ -100,15 +101,26 @@ const Profile = () => {
               </div>
             </div>
           </div>
-
           {/* Skills Section */}
           <div className="flex-1 w-full lg:w-auto">
             <div className=" bg-transparent rounded-2xl shadow-xl p-8 border ">
               <div className="font-bold text-3xl lg:text-4xl mb-6 text-indigo-300">
-                Skills
+                <TextType
+                  text={[
+                    "Hey! Welcome to my portfolio",
+                    "I am a Web Developer",
+                    "As well as Embedded IOT Developer",
+                    "A full time Student right now ",
+                    "An Extremist"
+                  ]}
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                />
               </div>
               <div className="grid text-white grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 w-full">
-                <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-indigo-500 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-indigo-300 hover:text-black">
+                {/* <div className="cursor-pointer flex items-center gap-3 px-4 py-2 border-transparent bg-indigo-500 backdrop-blur-md shadow-xl rounded-2xl shiny-skill transition-transform duration-200 hover:scale-105 hover:bg-indigo-300 hover:text-black">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                     alt="HTML5"
@@ -195,7 +207,7 @@ const Profile = () => {
                     className="h-8 w-8"
                   />
                   <span>Next.js</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

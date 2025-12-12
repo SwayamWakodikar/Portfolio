@@ -20,7 +20,7 @@ function App() {
     baseColor="#271e37"
     activeColor="#5227ff"
     proximity={70}
-    shockRadius={250}
+    shockRadius={80}
     shockStrength={5}
     resistance={750}
     returnDuration={1.5}
