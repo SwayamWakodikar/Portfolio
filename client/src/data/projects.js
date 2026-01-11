@@ -1,5 +1,5 @@
 import yourLedgerImg from "../assets/projects_img/yourledger.png";
-
+import vplaceImg from "../assets/projects_img/vplace.png";
 export const projects = [
     {
       id: 1,
@@ -27,7 +27,7 @@ export const projects = [
       description: "An AI platform for resume generation and ATS optimization. I managed the complete frontend and database.",
       tech: ["Next.js 16", "TypeScript", "Tailwind CSS 4", "Firebase Firestore", "NextAuth.js", "OpenRouter API", "ShadcnUI", "Motion"],
       category: "AI & Career Development",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600",
+      image: vplaceImg,
       github: "https://github.com/swayamwakodikar/Vplace",
       demo: "http://localhost:3000"
     }
