@@ -23,51 +23,7 @@ const Profile = () => {
               <div className="text-xl lg:text-2xl font-semibold text-indigo-100">
                 Developer | Electronics Geek
               </div>
-              <div className="text-xl lg:text-2xl font-semibold text-indigo-100 flex items-center gap-4 mt-3">
-                <a href="https://github.com/SwayamWakodikar" target="_blank">
-                  <img
-                    width="64"
-                    height="64"
-                    src="https://img.icons8.com/glyph-neue/64/FFFFFF/github.png"
-                    alt="GitHub"
-                  />
-                </a>
-                <a href="https://leetcode.com/u/swayam_w06/" target="_blank">
-                  <img
-                    width="64"
-                    height="64"
-                    src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/96/FFFFFF/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-bold-tal-revivo.png"
-                    alt="Leetcode"
-                  />
-                </a>
-                <a href="https://x.com/SwayamWakodikar" target="_blank">
-                  <img
-                    width="64"
-                    height="64"
-                    src="https://img.icons8.com/ios/50/FFFFFF/twitterx--v2.png"
-                    alt="X"
-                  />
-                </a>
-                <a href="https://www.instagram.com/swayam_w06/" target="_blank">
-                  <img
-                    width="64"
-                    height="64"
-                    src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new--v1.png"
-                    alt="Instagram"
-                  />
-                </a>
-                <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=swayam.w06@gmail.com"
-                  target="_blank"
-                >
-                  <img
-                    width="64"
-                    height="64"
-                    src="https://img.icons8.com/ios/50/FFFFFF/gmail-new.png"
-                    alt="gmail-new"
-                  />
-                </a>
-              </div>
+
             </div>
           </div>
           {/* Skills Section */}

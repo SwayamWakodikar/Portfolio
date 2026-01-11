@@ -22,13 +22,13 @@ export const projects = [
       demo: "#"
     },
     {
-      id: 3, 
+      id: 3,
       title: "Vplace: AI-Powered Career Suite",
-      description: "An AI platform for resume generation and ATS optimization. I managed the complete frontend and database.",
-      tech: ["Next.js 16", "TypeScript", "Tailwind CSS 4", "Firebase Firestore", "NextAuth.js", "OpenRouter API", "ShadcnUI", "Motion"],
+      description: "Developed for TechSprint'25, a GDG on-campus hackathon. An AI-driven platform for resume generation and ATS optimization, where I spearheaded the frontend and database architecture.",
+      tech: ["Next.js 15", "TypeScript", "Tailwind CSS 4", "Firebase Firestore", "NextAuth.js", "OpenRouter API", "ShadcnUI", "Motion"],
       category: "AI & Career Development",
       image: vplaceImg,
-      github: "https://github.com/swayamwakodikar/Vplace",
-      demo: "http://localhost:3000"
+      github: "https://github.com/SwayamWakodikar/Hackathon.git",
+      demo: "https://vplace.vercel.app"
     }
 ];
