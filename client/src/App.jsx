@@ -40,7 +40,6 @@ function App() {
         </Reveal>
 
       </div>
-
       <div id="Skills" className='mt-6'>
         <Reveal>
           <Skills />
