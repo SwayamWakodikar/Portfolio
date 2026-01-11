@@ -3,27 +3,25 @@ import CountUp from "./Counter/CountUp";
 import { useInView } from "framer-motion";
 const year = new Date().getFullYear()
 const Stats = () => {
-  const projects = [
-    { id: 1, title: "LeetCode Problems Solved", count: 50, color: "text-yellow-300", link: "https://leetcode.com/u/swayam_w06/" },
-    { id: 2, title: `GitHub Contributions ${year}`, count: 230, color: "text-blue-500", link: "https://github.com/SwayamWakodikar" },
+  const statsData = [
+    { id: 1, title: "LeetCode Problems Solved", count: 50, color: "text-indigo-400", link: "https://leetcode.com/u/swayam_w06/" },
+    { id: 2, title: `GitHub Contributions ${year}`, count: 230, color: "text-purple-400", link: "https://github.com/SwayamWakodikar" },
   ];
-console.log("API URL =", leetapi);
-console.log("Data =", leetcode);
 
   return (
-    <div className="w-screen min-h-screen py-20 bg-transparent">
+    <div className="w-screen min-h-screen py-20 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-indigo-300 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-indigo-200 via-purple-200 to-indigo-200 bg-clip-text text-transparent inline-block mb-4">
             My Stats
           </h2>
-          <p className="text-indigo-100 text-lg max-w-2xl mx-auto">
+          <p className="text-indigo-200/60 mt-3 text-sm font-medium max-w-2xl mx-auto">
             Some of my stats on different platforms showcasing my skills.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {stat.map((statistics) => {
+          {statsData.map((statistics) => {
             const ref = useRef(null);
             const isInView = useInView(ref, {
               once: false,
@@ -34,33 +32,33 @@ console.log("Data =", leetcode);
               <a
                 key={statistics.id}
                 href={statistics.link}
-                
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block"
+                className="block group"
               >
-                
                 <div
                   ref={ref}
-                  className="p-8 rounded-2xl bg-white/10 backdrop-blur-md
-                  border border-white/10 hover:scale-[1.03]
-                  transition-all duration-300 shadow-xl"
+                  className="relative p-8 rounded-2xl bg-[#0a0a0a]/40 backdrop-blur-xl
+                  border border-white/5 group-hover:bg-indigo-900/10 group-hover:border-indigo-500/30
+                  transition-all duration-300 shadow-lg overflow-hidden flex flex-col items-center gap-4"
                 >
-                  <h3 className="text-3xl font-bold text-blue-100 mb-4">
+                  {/* Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  <h3 className="relative z-10 text-xl font-medium text-indigo-100/80 group-hover:text-white transition-colors">
                     {statistics.title}
                   </h3>
 
-                  <div className="flex items-baseline gap-2">
+                  <div className="relative z-10 flex items-baseline gap-1">
                     <CountUp
                       key={isInView ? statistics.id + "-visible" : statistics.id + "-hidden"}
                       from={0}
                       to={statistics.count}
                       duration={1.2}
                       separator=","
-                      className={`text-6xl font-bold inline-block ${statistics.color}`}
+                      className={`text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-indigo-200 bg-clip-text text-transparent`}
                     />
-
-                    <span className={`text-5xl font-bold inline-block ${statistics.color}`}>
+                    <span className={`text-3xl lg:text-4xl font-bold text-indigo-300`}>
                       +
                     </span>
                   </div>
