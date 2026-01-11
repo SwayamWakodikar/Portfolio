@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import CountUp from "./Counter/CountUp";
 import { useInView } from "framer-motion";
-
+const year = new Date().getFullYear()
 const Stats = () => {
   const projects = [
     { id: 1, title: "LeetCode Problems Solved", count: 50, color: "text-yellow-300", link: "https://leetcode.com/u/swayam_w06/" },
-    { id: 2, title: "GitHub Contributions (Year)", count: 230, color: "text-blue-500", link: "https://github.com/SwayamWakodikar" },
+    { id: 2, title: `GitHub Contributions ${year}`, count: 230, color: "text-blue-500", link: "https://github.com/SwayamWakodikar" },
   ];
 
   return (
