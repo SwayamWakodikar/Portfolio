@@ -1,41 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import CountUp from "./Counter/CountUp";
 import { useInView } from "framer-motion";
-import axios from "axios";
-
+const year = new Date().getFullYear()
 const Stats = () => {
-  const [leetcode, setLeetcode] = useState(null);
-
-  const leetapi = import.meta.env.VITE_LEET_API;
-
-
-
-  useEffect(() => {
-    axios
-      .get(leetapi)
-      .then((res) => {
-        console.log("API DATA:", res.data);
-        setLeetcode(res.data);
-      })
-      .catch((err) => console.error("API Error:", err));
-  }, [leetapi]);
-
-  const stat = [
-    {
-      id: 1,
-      title: "LeetCode Problems Solved",
-      count: leetcode?.totalSolved ?? 0,
-      ranking: leetcode?.ranking??0,
-      color: "text-yellow-300",
-      link: "https://leetcode.com/u/swayam_w06/",
-    },
-    {
-      id: 2,
-      title: "GitHub Contributions (Year)",
-      count: 230,
-      color: "text-blue-500",
-      link: "https://github.com/SwayamWakodikar",
-    },
+  const projects = [
+    { id: 1, title: "LeetCode Problems Solved", count: 50, color: "text-yellow-300", link: "https://leetcode.com/u/swayam_w06/" },
+    { id: 2, title: `GitHub Contributions ${year}`, count: 230, color: "text-blue-500", link: "https://github.com/SwayamWakodikar" },
   ];
 console.log("API URL =", leetapi);
 console.log("Data =", leetcode);
