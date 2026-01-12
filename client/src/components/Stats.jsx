@@ -9,10 +9,10 @@ const Stats = () => {
   ];
 
   return (
-    <div className="w-full py-20 px-4 bg-transparent">
+    <div className="w-full py-10 md:py-20 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white inline-block mb-4 drop-shadow-md">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-white inline-block mb-4 drop-shadow-md">
             My Stats
           </h2>
           <p className="text-cyan-200/60 mt-3 text-sm font-medium max-w-2xl mx-auto">
@@ -20,7 +20,7 @@ const Stats = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {statsData.map((statistics) => {
             const ref = useRef(null);
             const isInView = useInView(ref, {
@@ -38,7 +38,7 @@ const Stats = () => {
               >
                 <div
                   ref={ref}
-                  className="relative p-8 rounded-2xl bg-[#0a0a0a]/40 backdrop-blur-xl
+                  className="relative p-6 md:p-8 rounded-2xl bg-[#0a0a0a]/40 backdrop-blur-xl
                   border border-white/5 group-hover:bg-cyan-900/10 group-hover:border-cyan-500/30
                   transition-all duration-300 shadow-lg overflow-hidden flex flex-col items-center gap-4"
                 >
@@ -56,9 +56,9 @@ const Stats = () => {
                       to={statistics.count}
                       duration={1.2}
                       separator=","
-                      className={`text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent`}
+                      className={`text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent`}
                     />
-                    <span className={`text-3xl lg:text-4xl font-bold text-cyan-400`}>
+                    <span className={`text-2xl md:text-3xl lg:text-4xl font-bold text-cyan-400`}>
                       +
                     </span>
                   </div>

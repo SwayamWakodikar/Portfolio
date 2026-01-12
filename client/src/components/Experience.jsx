@@ -47,7 +47,7 @@ const Experience = () => {
   ]
 
   return (
-    <div className="w-full min-h-screen py-20 px-4 bg-linear-to-b bg-transparent">
+    <div className="w-full min-h-screen py-20 px-4 bg-transparent">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold bg-linear-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-4">
@@ -89,8 +89,8 @@ const Experience = () => {
                       </div>
                       <span
                         className={`px-3 py-1 rounded-full text-xs font-semibold ${exp.type === 'work'
-                            ? 'bg-blue-100 text-blue-800'
-                            : 'bg-purple-100 text-purple-800'
+                          ? 'bg-blue-100 text-blue-800'
+                          : 'bg-purple-100 text-purple-800'
                           }`}
                       >
                         {exp.type === 'work' ? 'Work' : 'Education'}

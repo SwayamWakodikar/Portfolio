@@ -32,10 +32,10 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-full min-h-screen py-20 px-4 bg-transparent">
+    <div className="w-full min-h-screen py-10 md:py-20 px-4 bg-transparent">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white inline-block mb-4 drop-shadow-md">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-white inline-block mb-4 drop-shadow-md">
             Get In Touch
           </h2>
           <p className="text-cyan-200/60 mt-3 text-lg font-medium max-w-2xl mx-auto">
@@ -43,13 +43,13 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="relative p-8 lg:p-12 rounded-3xl bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/5 shadow-2xl overflow-hidden">
+        <div className="relative p-6 md:p-8 lg:p-12 rounded-3xl bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/5 shadow-2xl overflow-hidden">
           {/* Glow Effect */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -z-10" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10" />
 
-          <form onSubmit={handleSubmit} className="relative z-10 space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <form onSubmit={handleSubmit} className="relative z-10 space-y-6 md:space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-gray-400 ml-1">
                   Name
@@ -61,7 +61,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-gray-300 placeholder-gray-600 focus:outline-none focus:border-cyan-500/50 focus:bg-cyan-900/10 transition-all duration-300"
+                  className="w-full px-4 py-3 md:px-5 md:py-4 bg-white/5 border border-white/10 rounded-xl text-gray-300 placeholder-gray-600 focus:outline-none focus:border-cyan-500/50 focus:bg-cyan-900/10 transition-all duration-300"
                   placeholder="John Doe"
                 />
               </div>
@@ -77,7 +77,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300"
+                  className="w-full px-4 py-3 md:px-5 md:py-4 bg-white/5 border border-white/10 rounded-xl text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300"
                   placeholder="john@example.com"
                 />
               </div>
@@ -94,7 +94,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300 resize-none"
+                className="w-full px-4 py-3 md:px-5 md:py-4 bg-white/5 border border-white/10 rounded-xl text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300 resize-none"
                 placeholder="Tell me about your project..."
               />
             </div>
@@ -102,7 +102,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="group relative w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold py-4 px-8 rounded-xl h-14 overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group relative w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-xl h-12 md:h-14 overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative z-10 flex items-center justify-center gap-2 text-lg">

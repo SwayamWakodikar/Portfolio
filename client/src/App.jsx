@@ -34,13 +34,13 @@ function App() {
 
       </div>
       {/* <div className='mt-32 md:mt-36'></div> */}
-      <div id="About" className='mt-6'>
+      <div id="About" className='pt-32 md:pt-24 mt-6'>
         <Reveal>
           <Profile />
         </Reveal>
 
       </div>
-      <div id="Skills" className='mt-6'>
+      <div id="Skills" className='mt-6 mb-20'>
         <Reveal>
           <Skills />
         </Reveal>
