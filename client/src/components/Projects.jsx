@@ -13,7 +13,7 @@ const Projects = () => {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <div className="w-screen min-h-screen py-20 px-4 bg-linear-to-b bg-transparent">
+    <div className="w-full min-h-screen py-20 px-4 bg-linear-to-b bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-md">
@@ -25,12 +25,12 @@ const Projects = () => {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex p-1 gap-2 mb-12 overflow-x-auto bg-white/5 border border-white/10 rounded-full w-max mx-auto backdrop-blur-md">
+        <div className="flex p-1 gap-2 mb-12 overflow-x-auto bg-white/5 border border-white/10 rounded-full max-w-[90vw] md:w-max mx-auto backdrop-blur-md">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`relative px-6 py-2.5 rounded-full font-medium text-sm transition-colors duration-300 whitespace-nowrap z-10 ${activeCategory === category ? "text-white" : "text-gray-400 hover:text-cyan-300"
+              className={`relative px-4 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-sm transition-colors duration-300 whitespace-nowrap z-10 ${activeCategory === category ? "text-white" : "text-gray-400 hover:text-cyan-300"
                 }`}
             >
               {activeCategory === category && (

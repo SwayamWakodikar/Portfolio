@@ -40,7 +40,7 @@ const Skills = () => {
     };
 
     return (
-        <div className="select-none py-10 px-4 bg-transparent">
+        <div className="select-none w-full py-10 px-4 bg-transparent">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-10 text-center">
                     <h3 className="text-3xl lg:text-4xl font-bold text-white inline-block drop-shadow-md">
@@ -51,12 +51,12 @@ const Skills = () => {
                     </p>
                 </div>
 
-                <div className="flex p-1 gap-2 mb-12 overflow-x-auto bg-white/5 border border-white/10 rounded-full w-max mx-auto backdrop-blur-md">
+                <div className="flex p-1 gap-2 mb-12 overflow-x-auto bg-white/5 border border-white/10 rounded-full max-w-[90vw] md:w-max mx-auto backdrop-blur-md">
                     {Object.keys(skills).map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`relative px-6 py-2.5 rounded-full font-medium text-sm transition-colors duration-300 whitespace-nowrap z-10 ${activeTab === tab ? "text-white" : "text-gray-400 hover:text-cyan-300"
+                            className={`relative px-4 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-sm transition-colors duration-300 whitespace-nowrap z-10 ${activeTab === tab ? "text-white" : "text-gray-400 hover:text-cyan-300"
                                 }`}
                         >
                             {activeTab === tab && (

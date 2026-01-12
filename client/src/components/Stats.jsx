@@ -9,7 +9,7 @@ const Stats = () => {
   ];
 
   return (
-    <div className="w-screen py-20 px-4 bg-transparent">
+    <div className="w-full py-20 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-white inline-block mb-4 drop-shadow-md">

@@ -32,7 +32,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-screen min-h-screen py-20 px-4 bg-transparent">
+    <div className="w-full min-h-screen py-20 px-4 bg-transparent">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-white inline-block mb-4 drop-shadow-md">

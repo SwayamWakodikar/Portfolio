@@ -3,7 +3,7 @@ import assets from "../assets/assets.js";
 
 const Profile = () => {
   return (
-    <div className="select-none w-screen min-h-screen py-20 px-4 bg-transparent">
+    <div className="select-none w-full min-h-screen py-20 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-start gap-12">
           {/* Profile Image Section */}

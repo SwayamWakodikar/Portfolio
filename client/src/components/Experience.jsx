@@ -47,7 +47,7 @@ const Experience = () => {
   ]
 
   return (
-    <div className="w-screen min-h-screen py-20 px-4 bg-linear-to-b bg-transparent">
+    <div className="w-full min-h-screen py-20 px-4 bg-linear-to-b bg-transparent">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold bg-linear-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-4">
@@ -66,18 +66,16 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <div
                 key={exp.id}
-                className={`relative flex items-start ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className={`relative flex items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
                 {/* Timeline dot */}
                 <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-green-600 rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 z-10"></div>
 
                 {/* Content card */}
                 <div
-                  className={`w-full md:w-5/12 ml-16 md:ml-0 ${
-                    index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
-                  }`}
+                  className={`w-full md:w-5/12 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
+                    }`}
                 >
                   <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-gray-200 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
                     <div className="flex items-start justify-between mb-3">
@@ -90,11 +88,10 @@ const Experience = () => {
                         </p>
                       </div>
                       <span
-                        className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                          exp.type === 'work'
+                        className={`px-3 py-1 rounded-full text-xs font-semibold ${exp.type === 'work'
                             ? 'bg-blue-100 text-blue-800'
                             : 'bg-purple-100 text-purple-800'
-                        }`}
+                          }`}
                       >
                         {exp.type === 'work' ? 'Work' : 'Education'}
                       </span>
