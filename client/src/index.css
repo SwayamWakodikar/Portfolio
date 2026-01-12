@@ -9,4 +9,10 @@
  body {
     overflow-x: hidden;
     width: 100%;
+    color: white;
+    overscroll-behavior-y: none;
+ }
+ 
+ html {
+    background-color: #000000;
  }
