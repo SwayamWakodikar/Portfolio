@@ -29,41 +29,43 @@ function App() {
         />
       </div>
 
-      <div className='select-none' >
-        <Navbar />
+      <div className="relative w-full overflow-x-hidden">
+        <div className='select-none' >
+          <Navbar />
 
-      </div>
-      {/* <div className='mt-32 md:mt-36'></div> */}
-      <div id="About" className='pt-32 md:pt-24 mt-6'>
-        <Reveal>
-          <Profile />
-        </Reveal>
+        </div>
+        {/* <div className='mt-32 md:mt-36'></div> */}
+        <div id="About" className='pt-32 md:pt-24 mt-6'>
+          <Reveal>
+            <Profile />
+          </Reveal>
 
-      </div>
-      <div id="Skills" className='mt-6 mb-20'>
-        <Reveal>
-          <Skills />
-        </Reveal>
-      </div>
+        </div>
+        <div id="Skills" className='mt-6 mb-20'>
+          <Reveal>
+            <Skills />
+          </Reveal>
+        </div>
 
-      <div className='select-none' id="Projects">
-        <Reveal>
-          <Projects />
-        </Reveal>
+        <div className='select-none' id="Projects">
+          <Reveal>
+            <Projects />
+          </Reveal>
 
-      </div>
-      <div className='select-none' id="Stats">
-        <Reveal>
-          <Stats />
-        </Reveal>
+        </div>
+        <div className='select-none' id="Stats">
+          <Reveal>
+            <Stats />
+          </Reveal>
 
-      </div>
-      {/* <div id="Experience">
-        <Experience />
-      </div> */}
-      <div className='select-none' id="Contact">
+        </div>
+        {/* <div id="Experience">
+          <Experience />
+        </div> */}
+        <div className='select-none' id="Contact">
 
-        <Reveal><Contact /></Reveal>
+          <Reveal><Contact /></Reveal>
+        </div>
       </div>
     </>
 

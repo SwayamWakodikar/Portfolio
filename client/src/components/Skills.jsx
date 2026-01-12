@@ -74,7 +74,7 @@ const Skills = () => {
                 {/* Premium Skills Grid */}
                 <motion.div
                     layout
-                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 w-full min-h-[120px]"
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 w-full min-h-[120px] justify-items-center"
                 >
                     <AnimatePresence mode="popLayout">
                         {skills[activeTab].map((skill, index) => (

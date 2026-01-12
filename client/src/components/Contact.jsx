@@ -43,7 +43,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="relative p-6 md:p-8 lg:p-12 rounded-3xl bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/5 shadow-2xl overflow-hidden">
+        <div className="relative p-6 md:p-8 lg:p-12 rounded-3xl bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/5 shadow-2xl overflow-hidden w-full max-w-4xl mx-auto">
           {/* Glow Effect */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -z-10" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10" />

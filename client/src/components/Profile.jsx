@@ -27,7 +27,7 @@ const Profile = () => {
             </div>
           </div>
           {/* Skills Section */}
-          <div className="flex-1 w-full lg:w-auto">
+          <div className="flex-1 w-full lg:w-auto text-center lg:text-left">
             <div className=" bg-transparent rounded-2xl shadow-xl p-4 md:p-8 border-none ">
               <div className="space-y-6 md:space-y-10">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-8 relative inline-block drop-shadow-md">

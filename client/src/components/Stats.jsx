@@ -20,7 +20,7 @@ const Stats = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-items-center">
           {statsData.map((statistics) => {
             const ref = useRef(null);
             const isInView = useInView(ref, {
