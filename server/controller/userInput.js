@@ -1,1 +1,2 @@
-import userSchema from "../src/model/userModel";
+import userSchema from "../model/userModel";
+

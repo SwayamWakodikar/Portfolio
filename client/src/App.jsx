@@ -16,12 +16,12 @@ function App() {
 
       <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none bg-black">
         <DotGrid
-          dotSize={5}
-          gap={15}
+          dotSize={2}
+          gap={24}
           // backgroundColor="#000000"
-          baseColor="#271e37"
-          activeColor="#5227ff"
-          proximity={70}
+          baseColor="#222222"
+          activeColor="#22d3ee"
+          proximity={100}
           shockRadius={80}
           shockStrength={5}
           resistance={750}
