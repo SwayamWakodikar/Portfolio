@@ -28,7 +28,7 @@ export const projects = [
       tech: ["Next.js 15", "TypeScript", "Tailwind CSS 4", "Firebase Firestore", "NextAuth.js", "OpenRouter API", "ShadcnUI", "Motion"],
       category: "AI & Career Development",
       image: vplaceImg,
-      github: "https://github.com/SwayamWakodikar/Hackathon.git",
+      github: "https://github.com/SwayamWakodikar/Vplace.git",
       demo: "https://vplace.vercel.app"
     }
 ];
