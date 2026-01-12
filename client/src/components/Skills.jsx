@@ -34,7 +34,7 @@ const Skills = () => {
         ],
         Tools: [
             { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-            { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",invert: true },
+            { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", invert: true },
             { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
             { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
         ],
@@ -44,10 +44,10 @@ const Skills = () => {
         <div className="select-none py-10 px-4 bg-transparent">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-10 text-center">
-                    <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-indigo-200 via-purple-200 to-indigo-200 bg-clip-text text-transparent inline-block">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-white inline-block drop-shadow-md">
                         Technical Arsenal
                     </h3>
-                    <p className="text-indigo-200/60 mt-3 text-sm font-medium">
+                    <p className="text-cyan-200/60 mt-3 text-sm font-medium">
                         My weapons of choice for building digital universes.
                     </p>
                 </div>
@@ -57,13 +57,13 @@ const Skills = () => {
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`relative px-6 py-2.5 rounded-full font-medium text-sm transition-colors duration-300 whitespace-nowrap z-10 ${activeTab === tab ? "text-white" : "text-indigo-200/70 hover:text-white"
+                            className={`relative px-6 py-2.5 rounded-full font-medium text-sm transition-colors duration-300 whitespace-nowrap z-10 ${activeTab === tab ? "text-white" : "text-gray-400 hover:text-cyan-300"
                                 }`}
                         >
                             {activeTab === tab && (
                                 <motion.div
                                     layoutId="activeTab"
-                                    className="absolute inset-0 bg-indigo-600 rounded-full -z-10 shadow-[0_0_20px_rgba(79,70,229,0.5)]"
+                                    className="absolute inset-0 bg-cyan-600 rounded-full -z-10 shadow-[0_0_20px_rgba(34,211,238,0.5)]"
                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 />
                             )}
@@ -89,20 +89,20 @@ const Skills = () => {
                                 whileHover={{ scale: 1.05, y: -5 }}
                                 className="group relative flex flex-col items-center justify-center gap-4 p-8 
                     bg-[#0a0a0a]/40 border border-white/5 rounded-2xl 
-                    backdrop-blur-xl hover:bg-indigo-900/10 hover:border-indigo-500/30 
+                    backdrop-blur-xl hover:bg-cyan-900/10 hover:border-cyan-500/30  
                     transition-all duration-300 shadow-lg overflow-hidden "
                             >
                                 {/* Glow Effect */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                                <div className="relative z-10 p-4 rounded-xl bg-white/5 ring-1 ring-white/10 group-hover:ring-indigo-500/50 transition-all duration-300">
+                                <div className="relative z-10 p-4 rounded-xl bg-white/5 ring-1 ring-white/10 group-hover:ring-cyan-500/50 transition-all duration-300">
                                     <img
                                         src={skill.icon}
                                         alt={skill.name}
                                         className={`h-14 w-14 drop-shadow-lg ${skill.invert ? "brightness-0 invert" : ""}`}
                                     />
                                 </div>
-                                <span className="relative z-10 text-indigo-100/80 font-bold text-lg group-hover:text-white transition-colors">
+                                <span className="relative z-10 text-gray-400 font-bold text-lg group-hover:text-cyan-200 transition-colors">
                                     {skill.name}
                                 </span>
                             </motion.div>

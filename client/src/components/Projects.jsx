@@ -16,10 +16,10 @@ const Projects = () => {
     <div className="w-screen min-h-screen py-20 px-4 bg-linear-to-b bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold bg-linear-to-r text-indigo-300 bg-clip-text mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-md">
             My Projects
           </h2>
-          <p className="text-indigo-100/80 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             A collection of projects showcasing my skills and passion for building innovative solutions
           </p>
         </div>
@@ -30,13 +30,13 @@ const Projects = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`relative px-6 py-2.5 rounded-full font-medium text-sm transition-colors duration-300 whitespace-nowrap z-10 ${activeCategory === category ? "text-white" : "text-indigo-200/70 hover:text-white"
+              className={`relative px-6 py-2.5 rounded-full font-medium text-sm transition-colors duration-300 whitespace-nowrap z-10 ${activeCategory === category ? "text-white" : "text-gray-400 hover:text-cyan-300"
                 }`}
             >
               {activeCategory === category && (
                 <motion.div
                   layoutId="activeProjectCategory"
-                  className="absolute inset-0 bg-indigo-600 rounded-full -z-10 shadow-[0_0_20px_rgba(79,70,229,0.5)]"
+                  className="absolute inset-0 bg-cyan-600 rounded-full -z-10 shadow-[0_0_20px_rgba(34,211,238,0.5)]"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
@@ -71,15 +71,15 @@ const Projects = () => {
 
                 <div className="relative p-8 flex-1 flex flex-col">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
                       {project.title}
                     </h3>
-                    <span className="px-3 py-1 bg-indigo-500/20 text-indigo-200 text-xs font-semibold rounded-full border border-indigo-500/30">
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-200 text-xs font-semibold rounded-full border border-cyan-500/30">
                       {project.category}
                     </span>
                   </div>
 
-                  <p className="text-indigo-100/80 mb-6 leading-relaxed flex-1">
+                  <p className="text-gray-400 mb-6 leading-relaxed flex-1">
                     {project.description}
                   </p>
 
@@ -87,7 +87,7 @@ const Projects = () => {
                     {project.tech.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-white/5 text-indigo-200 text-sm font-medium rounded-lg border border-white/10"
+                        className="px-3 py-1 bg-cyan-900/10 text-cyan-200 text-sm font-medium rounded-lg border border-cyan-500/20"
                       >
                         {tech}
                       </span>
@@ -110,7 +110,7 @@ const Projects = () => {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-colors font-medium text-sm shadow-lg shadow-indigo-500/20"
+                      className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-xl hover:scale-105 transition-all font-medium text-sm shadow-lg shadow-cyan-500/20"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
