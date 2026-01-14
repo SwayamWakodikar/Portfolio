@@ -38,16 +38,6 @@ const Navbar = () => {
           <li>
             <a
               draggable="false"
-              href="#Skills"
-              className="text-white hover:text-gray-400 transition-colors font-medium"
-              onClick={e => handleSmoothScroll(e, 'Skills')}
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              draggable="false"
               href="#Projects"
               className="text-white hover:text-gray-400 transition-colors font-medium"
               onClick={e => handleSmoothScroll(e, 'Projects')}
@@ -108,16 +98,6 @@ const Navbar = () => {
               onClick={e => handleSmoothScroll(e, 'About')}
             >
               About Me
-            </a>
-          </li>
-          <li className="w-full text-center">
-            <a
-              draggable="false"
-              href="#Skills"
-              className="block py-2 text-white hover:text-gray-400 transition-colors"
-              onClick={e => handleSmoothScroll(e, 'Skills')}
-            >
-              Skills
             </a>
           </li>
           <li className="w-full text-center">
