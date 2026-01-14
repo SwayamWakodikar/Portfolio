@@ -21,7 +21,7 @@ const Contact = () => {
     setStatus("sending");
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/contact",
+        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/contact`,
         formData
       );
       if (response.status == 200 || response.status == 201) {
