@@ -25,7 +25,7 @@ const Contact = () => {
         formData
       );
       if (response.status == 200 || response.status == 201) {
-        setStatus("message sent");
+        setStatus("success");
         setFormData({ name: "", email: "", message: "" });
         setTimeout(() => setStatus(""), 3000);
       }
