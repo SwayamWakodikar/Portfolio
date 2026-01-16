@@ -8,7 +8,7 @@ export const saveContact = async (req, res) => {
         const { data, error } = await supabaseClient
             .from('Contact')
             .insert([{ Name: name, email: email, Message: message }]);
-
+        
         if (error) throw error;
         
         console.log("Data saved successfully:", { name, email, message });
