@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import resumePdf from '../assets/Swayam_Wakodikar_Resume.pdf';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,6 +76,17 @@ const Navbar = () => {
               Contact Me
             </a>
           </li>
+          <li>
+            <a
+              draggable="false"
+              href={resumePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white font-bold hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 transform hover:scale-105"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         {/* Mobile Menu Toggle Button */}
@@ -148,6 +160,17 @@ const Navbar = () => {
               onClick={e => handleSmoothScroll(e, 'Contact')}
             >
               Contact Me
+            </a>
+          </li>
+          <li className="w-full text-center pt-2">
+            <a
+              draggable="false"
+              href={resumePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white font-bold hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300"
+            >
+              Resume
             </a>
           </li>
         </ul>
