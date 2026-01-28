@@ -3,7 +3,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-// import Reveal from './components/Reveal';
+import Reveal from './components/Reveal';
 import DotGrid from './components/backgorund/DotGrid';
 import Stats from './components/Stats';
 
@@ -42,21 +42,21 @@ function App() {
 
         </div>
         <div id="Skills" className='mt-6 mb-20'>
-          {/* <Reveal> */}
+          <Reveal>
             <Skills />
-          {/* </Reveal> */}
+          </Reveal>
         </div>
 
         <div className='select-none' id="Projects">
-          {/* <Reveal> */}
+          <Reveal>
             <Projects />
-          {/* </Reveal> */}
+          </Reveal>
 
         </div>
         <div className='select-none' id="Stats">
-          {/* <Reveal> */}
+          <Reveal>
             <Stats />
-          {/* </Reveal> */}
+          </Reveal>
 
         </div>
         {/* <div id="Experience">
@@ -64,7 +64,7 @@ function App() {
         </div> */}
         <div className='select-none' id="Contact">
 
-          {/* <Reveal> */}<Contact />{/* </Reveal> */}
+          <Reveal><Contact /></Reveal>
         </div>
       </div>
     </>
