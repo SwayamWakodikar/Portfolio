@@ -3,10 +3,60 @@ import CountUp from "./Counter/CountUp";
 import { useInView } from "framer-motion";
 const year = new Date().getFullYear()
 const Stats = () => {
-  const statsData = [
+  const [statsData, setStatsData] = useState([
     { id: 1, title: "LeetCode Problems Solved", count: 50, color: "text-white", link: "https://leetcode.com/u/swayam_w06/" },
     { id: 2, title: `GitHub Contributions ${year}`, count: 230, color: "text-gray-400", link: "https://github.com/SwayamWakodikar" },
-  ];
+    { id: 3, title: "GitHub Repositories", count: 0, color: "text-white", link: "https://github.com/SwayamWakodikar?tab=repositories" },
+  ]);
+
+  useEffect(() => {
+    const fetchGitHubStats = async () => {
+      const token = import.meta.env.VITE_GITHUB_TOKEN;
+      const query = `
+        query {
+          viewer {
+            repositories(ownerAffiliations: OWNER, first: 1) {
+              totalCount
+            }
+            contributionsCollection {
+              totalCommitContributions
+            }
+          }
+        }
+      `;
+
+      try {
+        const response = await fetch("https://api.github.com/graphql", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query }),
+        });
+
+        const data = await response.json();
+
+        if (data.data) {
+          const { viewer } = data.data;
+          const repoCount = viewer.repositories.totalCount;
+          const commitCount = viewer.contributionsCollection.totalCommitContributions;
+
+          setStatsData((prev) =>
+            prev.map((stat) => {
+              if (stat.id === 2) return { ...stat, count: commitCount };
+              if (stat.id === 3) return { ...stat, count: repoCount };
+              return stat;
+            })
+          );
+        }
+      } catch (error) {
+        console.error("Error fetching GitHub stats:", error);
+      }
+    };
+
+    fetchGitHubStats();
+  }, []);
 
   return (
     <div className="w-full py-10 md:py-20 px-4 bg-transparent">
@@ -20,7 +70,7 @@ const Stats = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
           {statsData.map((statistics) => {
             const ref = useRef(null);
             const isInView = useInView(ref, {
@@ -34,7 +84,7 @@ const Stats = () => {
                 href={statistics.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group"
+                className="block group w-full max-w-sm"
               >
                 <div
                   ref={ref}
@@ -51,7 +101,7 @@ const Stats = () => {
 
                   <div className="relative z-10 flex items-baseline gap-1">
                     <CountUp
-                      key={isInView ? statistics.id + "-visible" : statistics.id + "-hidden"}
+                      key={isInView ? `${statistics.id}-visible-${statistics.count}` : `${statistics.id}-hidden`}
                       from={0}
                       to={statistics.count}
                       duration={1.2}
@@ -59,7 +109,7 @@ const Stats = () => {
                       className={`text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent`}
                     />
                     <span className={`text-2xl md:text-3xl lg:text-4xl font-bold text-cyan-400`}>
-                      +
+                      {statistics.id === 3 ? "" : "+"}
                     </span>
                   </div>
                 </div>

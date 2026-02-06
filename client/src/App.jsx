@@ -36,25 +36,25 @@ function App() {
         </div>
         {/* <div className='mt-32 md:mt-36'></div> */}
         <div id="About" className='pt-32 md:pt-24 mt-6'>
-          {/* <Reveal> */}
+          <Reveal delay={0.2}>
             <Profile />
-          {/* </Reveal> */}
+          </Reveal>
 
         </div>
         <div id="Skills" className='mt-6 mb-20'>
-          <Reveal>
+          <Reveal delay={0.2}>
             <Skills />
           </Reveal>
         </div>
 
         <div className='select-none' id="Projects">
-          <Reveal>
+          <Reveal delay={0.2}>
             <Projects />
           </Reveal>
 
         </div>
         <div className='select-none' id="Stats">
-          <Reveal>
+          <Reveal delay={0.2}>
             <Stats />
           </Reveal>
 
@@ -64,7 +64,7 @@ function App() {
         </div> */}
         <div className='select-none' id="Contact">
 
-          <Reveal><Contact /></Reveal>
+          <Reveal delay={0.2}><Contact /></Reveal>
         </div>
       </div>
     </>
