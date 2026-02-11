@@ -9,6 +9,7 @@ import Stats from './components/Stats';
 import Leadership from './components/Leadership';
 import Footer from './components/Footer';
 import BestAt from './components/BestAt';
+import Education from './components/Education';
 
 import Skills from './components/Skills';
 
@@ -51,6 +52,12 @@ function App() {
           </Reveal>
         </div>
 
+        <div id="Education" className='mt-6 mb-20'>
+          <Reveal delay={0.2}>
+            <Education />
+          </Reveal>
+        </div>
+
         <div className='select-none' id="Projects">
           <Reveal delay={0.2}>
             <Projects />
@@ -67,7 +74,7 @@ function App() {
         <Reveal>
           <BestAt />
         </Reveal>
-        
+
 
         <div className='select-none' id="Leadership">
           <Reveal delay={0.2}>

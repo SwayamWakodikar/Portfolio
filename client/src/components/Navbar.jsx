@@ -33,7 +33,7 @@ const Navbar = () => {
               className="text-white hover:text-cyan-400 transition-colors font-medium"
               onClick={e => handleSmoothScroll(e, 'About')}
             >
-              About Me
+              About
             </a>
           </li>
           <li>
@@ -49,21 +49,21 @@ const Navbar = () => {
           <li>
             <a
               draggable="false"
-              href="#Projects"
+              href="#Education"
               className="text-white hover:text-gray-400 transition-colors font-medium"
-              onClick={e => handleSmoothScroll(e, 'Projects')}
+              onClick={e => handleSmoothScroll(e, 'Education')}
             >
-              Projects
+              Education
             </a>
           </li>
           <li>
             <a
               draggable="false"
-              href="#Stats"
+              href="#Projects"
               className="text-white hover:text-gray-400 transition-colors font-medium"
-              onClick={e => handleSmoothScroll(e, 'Stats')}
+              onClick={e => handleSmoothScroll(e, 'Projects')}
             >
-              Stats
+              Projects
             </a>
           </li>
           <li>
@@ -76,7 +76,7 @@ const Navbar = () => {
               Leadership
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               draggable="false"
               href="#Contact"
@@ -85,7 +85,7 @@ const Navbar = () => {
             >
               Contact Me
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               draggable="false"
@@ -93,7 +93,7 @@ const Navbar = () => {
               onClick={e => handleSmoothScroll(e, 'Contact')}
               className="px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white font-bold hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 transform hover:scale-105"
             >
-              Contact Me
+              Contact
             </a>
           </li>
         </ul>
@@ -128,7 +128,7 @@ const Navbar = () => {
               className="block py-2 text-white hover:text-cyan-400 transition-colors"
               onClick={e => handleSmoothScroll(e, 'About')}
             >
-              About Me
+              About
             </a>
           </li>
           <li className="w-full text-center">
@@ -144,21 +144,21 @@ const Navbar = () => {
           <li className="w-full text-center">
             <a
               draggable="false"
-              href="#Projects"
+              href="#Education"
               className="block py-2 text-white hover:text-gray-400 transition-colors"
-              onClick={e => handleSmoothScroll(e, 'Projects')}
+              onClick={e => handleSmoothScroll(e, 'Education')}
             >
-              Projects
+              Education
             </a>
           </li>
           <li className="w-full text-center">
             <a
               draggable="false"
-              href="#Stats"
+              href="#Projects"
               className="block py-2 text-white hover:text-gray-400 transition-colors"
-              onClick={e => handleSmoothScroll(e, 'Stats')}
+              onClick={e => handleSmoothScroll(e, 'Projects')}
             >
-              Stats
+              Projects
             </a>
           </li>
           <li className="w-full text-center">
@@ -171,16 +171,6 @@ const Navbar = () => {
               Leadership
             </a>
           </li>
-          <li className="w-full text-center">
-            <a
-              draggable="false"
-              href="#Contact"
-              className="block py-2 text-white hover:text-gray-400 transition-colors"
-              onClick={e => handleSmoothScroll(e, 'Contact')}
-            >
-              Contact Me
-            </a>
-          </li>
           <li className="w-full text-center pt-2">
             <a
               draggable="false"
@@ -188,7 +178,7 @@ const Navbar = () => {
               onClick={e => handleSmoothScroll(e, 'Contact')}
               className="inline-block px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white font-bold hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300"
             >
-              Contact Me
+              Contact
             </a>
           </li>
         </ul>
