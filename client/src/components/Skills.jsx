@@ -25,6 +25,7 @@ const Skills = () => {
             { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
             { name: "Prisma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg", invert: true },
             { name: "Socket.io", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg", invert: true },
+            { name: "STM32", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/embeddedc/embeddedc-original.svg" },
         ],
         Languages: [
             { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
@@ -34,6 +35,8 @@ const Skills = () => {
             { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
             { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" },
             { name: "R", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" },
+            { name: "Embedded C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/embeddedc/embeddedc-original.svg" },
+            { name: "VHDL", icon: "https://api.iconify.design/mdi:chip.svg?color=%2300599C" },
         ],
         Tools: [
             { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
@@ -44,6 +47,10 @@ const Skills = () => {
             { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
             { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg", invert: true },
             { name: "Arduino", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" },
+            { name: "Multisim", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/labview/labview-original.svg" },
+            { name: "KiCad", icon: "https://upload.wikimedia.org/wikipedia/commons/5/59/KiCad-Logo.svg" },
+            { name: "PCB Design", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg" },
+            { name: "Vivado", icon: "https://api.iconify.design/mdi:developer-board.svg?color=%23E94E1B" },
         ],
     };
 
