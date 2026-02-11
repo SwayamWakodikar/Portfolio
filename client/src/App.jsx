@@ -64,8 +64,10 @@ function App() {
 
         </div>
 
-        {/* Best At Strip */}
-        <BestAt />
+        <Reveal>
+          <BestAt />
+        </Reveal>
+        
 
         <div className='select-none' id="Leadership">
           <Reveal delay={0.2}>
