@@ -7,6 +7,8 @@ import Reveal from './components/Reveal';
 import DotGrid from './components/backgorund/DotGrid';
 import Stats from './components/Stats';
 import Leadership from './components/Leadership';
+import Footer from './components/Footer';
+import BestAt from './components/BestAt';
 
 import Skills from './components/Skills';
 
@@ -42,6 +44,7 @@ function App() {
           </Reveal>
 
         </div>
+
         <div id="Skills" className='mt-6 mb-20'>
           <Reveal delay={0.2}>
             <Skills />
@@ -60,6 +63,10 @@ function App() {
           </Reveal>
 
         </div>
+
+        {/* Best At Strip */}
+        <BestAt />
+
         <div className='select-none' id="Leadership">
           <Reveal delay={0.2}>
             <Leadership />
@@ -73,6 +80,9 @@ function App() {
 
           <Reveal delay={0.2}><Contact /></Reveal>
         </div>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </>
 
