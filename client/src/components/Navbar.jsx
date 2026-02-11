@@ -69,6 +69,16 @@ const Navbar = () => {
           <li>
             <a
               draggable="false"
+              href="#Leadership"
+              className="text-white hover:text-gray-400 transition-colors font-medium"
+              onClick={e => handleSmoothScroll(e, 'Leadership')}
+            >
+              Leadership
+            </a>
+          </li>
+          <li>
+            <a
+              draggable="false"
               href="#Contact"
               className="text-white hover:text-gray-400 transition-colors font-medium"
               onClick={e => handleSmoothScroll(e, 'Contact')}
@@ -79,12 +89,11 @@ const Navbar = () => {
           <li>
             <a
               draggable="false"
-              href={resumePdf}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#Contact"
+              onClick={e => handleSmoothScroll(e, 'Contact')}
               className="px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white font-bold hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 transform hover:scale-105"
             >
-              Resume
+              Contact Me
             </a>
           </li>
         </ul>
@@ -155,6 +164,16 @@ const Navbar = () => {
           <li className="w-full text-center">
             <a
               draggable="false"
+              href="#Leadership"
+              className="block py-2 text-white hover:text-gray-400 transition-colors"
+              onClick={e => handleSmoothScroll(e, 'Leadership')}
+            >
+              Leadership
+            </a>
+          </li>
+          <li className="w-full text-center">
+            <a
+              draggable="false"
               href="#Contact"
               className="block py-2 text-white hover:text-gray-400 transition-colors"
               onClick={e => handleSmoothScroll(e, 'Contact')}
@@ -165,12 +184,11 @@ const Navbar = () => {
           <li className="w-full text-center pt-2">
             <a
               draggable="false"
-              href={resumePdf}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#Contact"
+              onClick={e => handleSmoothScroll(e, 'Contact')}
               className="inline-block px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white font-bold hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300"
             >
-              Resume
+              Contact Me
             </a>
           </li>
         </ul>

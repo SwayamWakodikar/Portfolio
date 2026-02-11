@@ -1,5 +1,6 @@
 import React from "react";
 import assets from "../assets/assets.js";
+import resumePdf from '../assets/Swayam_Wakodikar_Resume.pdf';
 
 const Profile = () => {
   return (
@@ -22,6 +23,27 @@ const Profile = () => {
               </div>
               <div className="text-lg md:text-xl lg:text-2xl font-semibold text-cyan-200/80">
                 Developer | Electronics Geek
+              </div>
+
+              <div className="flex flex-wrap gap-4 mt-6 justify-center lg:justify-start">
+                <a
+                  href={resumePdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white font-bold shadow-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 transform hover:scale-105"
+                >
+                  Resume
+                </a>
+                <a
+                  href="#Contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('Contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="px-6 py-3 bg-transparent border border-cyan-500/30 rounded-full text-cyan-200 font-bold hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300"
+                >
+                  Contact Me
+                </a>
               </div>
 
             </div>
