@@ -277,7 +277,9 @@ const Education = () => {
                                 <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-400">
                                     {item.title}
                                 </h3>
-                                {item.content}
+                                <div className="p-6 md:p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+                                    {item.content}
+                                </div>
                             </div>
                         </div>
                     );
