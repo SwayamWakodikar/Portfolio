@@ -53,9 +53,7 @@ function App() {
         </div>
 
         <div id="Education" className='mt-6 mb-20'>
-          <Reveal delay={0.2}>
-            <Education />
-          </Reveal>
+          <Education />
         </div>
 
         <div className='select-none' id="Projects">
