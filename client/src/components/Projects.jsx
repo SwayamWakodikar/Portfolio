@@ -96,9 +96,20 @@ const Projects = () => {
                     <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
                       {project.title}
                     </h3>
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-200 text-xs font-semibold rounded-full border border-cyan-500/30 whitespace-nowrap ml-2">
-                      {project.category}
-                    </span>
+                    <div className="flex gap-2 ml-2">
+                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-200 text-xs font-semibold rounded-full border border-cyan-500/30 whitespace-nowrap">
+                        {project.category}
+                      </span>
+                      <span className={`px-3 py-1 text-xs font-semibold rounded-full border whitespace-nowrap flex items-center gap-2 ${project.status === "Completed"
+                        ? "bg-blue-500/20 text-blue-200 border-blue-500/30"
+                        : "bg-green-500/20 text-green-200 border-green-500/30"
+                        }`}>
+                        {project.status === "Ongoing" && (
+                          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse-glow-dot"></span>
+                        )}
+                        {project.status}
+                      </span>
+                    </div>
                   </div>
 
                   <div className="flex gap-3 items-center mt-auto">
@@ -194,9 +205,20 @@ const Projects = () => {
                         <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
                           {selectedProject.title}
                         </h2>
-                        <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 text-sm font-bold rounded-full border border-cyan-400/40 whitespace-nowrap shadow-lg shadow-cyan-500/20">
-                          {selectedProject.category}
-                        </span>
+                        <div className="flex gap-2">
+                          <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 text-sm font-bold rounded-full border border-cyan-400/40 whitespace-nowrap shadow-lg shadow-cyan-500/20">
+                            {selectedProject.category}
+                          </span>
+                          <span className={`px-4 py-2 text-sm font-bold rounded-full border whitespace-nowrap shadow-lg flex items-center gap-2 ${selectedProject.status === "Completed"
+                            ? "bg-gradient-to-r from-blue-500/20 to-blue-600/20 text-blue-300 border-blue-400/40 shadow-blue-500/20"
+                            : "bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-300 border-green-400/40 shadow-green-500/20"
+                            }`}>
+                            {selectedProject.status === "Ongoing" && (
+                              <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse-glow-dot"></span>
+                            )}
+                            {selectedProject.status}
+                          </span>
+                        </div>
                       </div>
 
                       <div className="mb-6">

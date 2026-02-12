@@ -143,3 +143,19 @@
     /* @apply bg-background text-foreground; */
     }
 }
+
+/* Pulsing glow animation for ongoing status dot */
+@keyframes pulse-glow-dot {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(34, 197, 94, 0.6), 0 0 12px rgba(34, 197, 94, 0.3);
+    background-color: rgba(34, 197, 94, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(34, 197, 94, 1), 0 0 24px rgba(34, 197, 94, 0.6);
+    background-color: rgba(34, 197, 94, 1);
+  }
+}
+
+.animate-pulse-glow-dot {
+  animation: pulse-glow-dot 2s ease-in-out infinite;
+}
