@@ -22,6 +22,20 @@ const Education = () => {
     const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
 
+    // Calculate glow for each checkpoint based on scroll progress
+    const getCheckpointGlow = (index, total) => {
+        const checkpointPosition = index / (total - 1);
+        const glowStart = Math.max(0, checkpointPosition - 0.1);
+        const glowPeak = checkpointPosition;
+        const glowEnd = Math.min(1, checkpointPosition + 0.1);
+
+        return useTransform(
+            scrollYProgress,
+            [glowStart, glowPeak, glowEnd],
+            [0, 1, 0.3]
+        );
+    };
+
     const educationData = [
         {
             title: "Till 2022",
@@ -224,25 +238,50 @@ const Education = () => {
                 </p>
             </div>
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-                {educationData.map((item, index) => (
-                    <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
-                        <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-                            <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
-                                <div className="h-4 w-4 rounded-full bg-neutral-800 border border-cyan-500/50 p-2" />
-                            </div>
-                            <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-400">
-                                {item.title}
-                            </h3>
-                        </div>
+                {educationData.map((item, index) => {
+                    const glowIntensity = getCheckpointGlow(index, educationData.length);
 
-                        <div className="relative pl-20 pr-4 md:pl-4 w-full">
-                            <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-400">
-                                {item.title}
-                            </h3>
-                            {item.content}
+                    return (
+                        <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
+                            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+                                <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
+                                    <motion.div
+                                        className="h-4 w-4 rounded-full border border-cyan-500/50 p-2"
+                                        style={{
+                                            backgroundColor: useTransform(
+                                                glowIntensity,
+                                                [0, 0.5, 1],
+                                                [
+                                                    'rgb(38, 38, 38)',      // neutral-800
+                                                    'rgb(34, 211, 238)',    // cyan-400
+                                                    'rgb(6, 182, 212)'      // cyan-500
+                                                ]
+                                            ),
+                                            boxShadow: useTransform(
+                                                glowIntensity,
+                                                [0, 1],
+                                                [
+                                                    '0 0 0px rgba(6, 182, 212, 0)',
+                                                    '0 0 20px rgba(6, 182, 212, 0.8), 0 0 40px rgba(6, 182, 212, 0.4), 0 0 60px rgba(6, 182, 212, 0.2)'
+                                                ]
+                                            )
+                                        }}
+                                    />
+                                </div>
+                                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-400">
+                                    {item.title}
+                                </h3>
+                            </div>
+
+                            <div className="relative pl-20 pr-4 md:pl-4 w-full">
+                                <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-400">
+                                    {item.title}
+                                </h3>
+                                {item.content}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
                 <div
                     style={{
                         height: height + "px",
