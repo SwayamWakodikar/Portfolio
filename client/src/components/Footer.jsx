@@ -20,7 +20,7 @@ const Footer = () => {
         {
             name: "Email",
             icon: Mail,
-            url: "mailto:swayam.wakodikar@example.com",
+            url: "mailto:swayam.w06@gmail.com",
             color: "hover:text-cyan-400"
         },
         {
@@ -72,8 +72,8 @@ const Footer = () => {
                         </div>
                         <div className="flex items-center gap-2 text-gray-400">
                             <Mail size={18} className="text-cyan-400" />
-                            <a href="mailto:swayam.wakodikar@example.com" className="hover:text-cyan-300 transition-colors">
-                                swayam.wakodikar@example.com
+                            <a href="mailto:swayam.w06@gmail.com" className="hover:text-cyan-300 transition-colors">
+                                swayam.w06@gmail.com
                             </a>
                         </div>
                     </div>
