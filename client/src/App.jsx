@@ -10,21 +10,29 @@ import Leadership from './components/Leadership';
 import Footer from './components/Footer';
 import BestAt from './components/BestAt';
 import Education from './components/Education';
+import ThemeToggler from './components/ThemeToggler';
+import { useTheme } from './context/ThemeContext';
 
 import Skills from './components/Skills';
 
 function App() {
+  const { theme } = useTheme();
+
+  // Define colors based on theme
+  const dotColors = theme === 'dark'
+    ? { base: '#222222', active: '#22d3ee' }
+    : { base: '#e0e0e0', active: '#0891b2' };
+
   return (
 
     <>
 
-      <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none bg-black">
+      <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none bg-[var(--bg-primary)]">
         <DotGrid
           dotSize={2}
           gap={24}
-          // backgroundColor="#000000"
-          baseColor="#222222"
-          activeColor="#22d3ee"
+          baseColor={dotColors.base}
+          activeColor={dotColors.active}
           proximity={100}
           shockRadius={80}
           shockStrength={5}
@@ -32,6 +40,9 @@ function App() {
           returnDuration={1.5}
         />
       </div>
+
+      {/* Theme Toggler */}
+      <ThemeToggler />
 
       <div className="relative w-full overflow-x-hidden">
         <div className='select-none' >

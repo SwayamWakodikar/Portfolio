@@ -21,7 +21,7 @@ const BestAt = () => {
     ];
 
     return (
-        <div className="w-full py-6 md:py-8 px-4 bg-[#0a0a0a]/80 border-y border-cyan-500/20">
+        <div className="w-full py-6 md:py-8 px-4 bg-white/80 dark:bg-[#0a0a0a]/80 border-y border-cyan-500/20">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row items-center justify-center md:justify-around gap-6 md:gap-8">
                     {highlights.map((item) => {
@@ -37,7 +37,7 @@ const BestAt = () => {
                                 </div>
 
                                 {/* Text */}
-                                <p className="text-white font-semibold text-sm md:text-base">
+                                <p className="text-gray-900 dark:text-white font-semibold text-sm md:text-base">
                                     {item.text}
                                 </p>
                             </div>

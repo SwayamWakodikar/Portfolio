@@ -109,10 +109,10 @@ const Stats = () => {
     <div className="w-full py-10 md:py-20 px-4 bg-transparent select-none">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-20">
-          <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-white inline-block mb-4 drop-shadow-md">
+          <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white inline-block mb-4 drop-shadow-md">
             My Stats
           </h2>
-          <p className="text-cyan-200/60 mt-3 text-sm font-medium max-w-2xl mx-auto">
+          <p className="text-cyan-600 dark:text-cyan-200/60 mt-3 text-sm font-medium max-w-2xl mx-auto">
             A glimpse into my coding journey and contributions across platforms.
           </p>
         </div>
@@ -137,8 +137,8 @@ const Stats = () => {
                 <div
                   ref={ref}
                   className="relative p-6 md:p-8 rounded-3xl overflow-hidden
-                  bg-[#0a0a0a]/40 backdrop-blur-md
-                  border border-white/10 hover:border-white/20
+                  bg-white/80 dark:bg-[#0a0a0a]/40 backdrop-blur-md
+                  border border-black/5 dark:border-white/10 hover:border-black/10 dark:hover:border-white/20
                   transition-all duration-500 ease-out
                   group-hover:translate-y-[-5px]
                   group-hover:shadow-[0_0_40px_-10px_rgba(34,211,238,0.15)]"
@@ -156,10 +156,10 @@ const Stats = () => {
 
                     {/* Title with Icon */}
                     <div className="flex items-center gap-3 mb-4 md:mb-6">
-                      <div className={`p-2 rounded-lg bg-white/5 ring-1 ring-white/10 ${statistics.theme.iconRing} transition-all duration-300`}>
-                        <Icon size={20} className={`text-gray-300 ${statistics.theme.iconColor}`} />
+                      <div className={`p-2 rounded-lg bg-black/5 dark:bg-white/5 ring-1 ring-black/10 dark:ring-white/10 ${statistics.theme.iconRing} transition-all duration-300`}>
+                        <Icon size={20} className={`text-gray-700 dark:text-gray-300 ${statistics.theme.iconColor}`} />
                       </div>
-                      <h3 className="text-lg md:text-xl font-medium text-gray-300 group-hover:text-white transition-colors">
+                      <h3 className="text-lg md:text-xl font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                         {statistics.title}
                       </h3>
                     </div>

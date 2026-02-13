@@ -32,10 +32,10 @@ const Projects = () => {
     <div className="w-full min-h-screen py-10 md:py-20 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 drop-shadow-md">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 drop-shadow-md">
             My Projects
           </h2>
-          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
             A collection of projects showcasing my skills and passion for building innovative solutions
           </p>
         </div>
@@ -46,7 +46,7 @@ const Projects = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`relative px-6 py-2.5 rounded-full font-medium text-sm transition-colors duration-300 whitespace-nowrap z-10 ${activeCategory === category ? "text-white" : "text-gray-400 hover:text-cyan-300"
+              className={`relative px-6 py-2.5 rounded-full font-medium text-sm transition-colors duration-300 whitespace-nowrap z-10 ${activeCategory === category ? "text-white" : "text-gray-600 dark:text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-300"
                 }`}
             >
               {activeCategory === category && (
@@ -72,7 +72,7 @@ const Projects = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
-                className={`group relative backdrop-blur-xs rounded-3xl overflow-hidden transition-all duration-300 hover:scale-[1.02] border border-white/5 bg-white/5 flex flex-col w-full cursor-pointer ${filteredProjects.length === 1 ? 'max-w-2xl' : 'md:w-[45%] lg:w-[30%]'
+                className={`group relative backdrop-blur-xs rounded-3xl overflow-hidden transition-all duration-300 hover:scale-[1.02] border border-black/5 dark:border-white/5 bg-white/80 dark:bg-white/5 flex flex-col w-full cursor-pointer ${filteredProjects.length === 1 ? 'max-w-2xl' : 'md:w-[45%] lg:w-[30%]'
                   }`}
               >
                 {/* Project Image */}
@@ -93,7 +93,7 @@ const Projects = () => {
                     className="flex justify-between items-start mb-4"
                     onClick={() => setSelectedProject(project)}
                   >
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">
                       {project.title}
                     </h3>
                     <div className="flex gap-2 ml-2">
@@ -139,7 +139,7 @@ const Projects = () => {
                     </a>
                     <button
                       onClick={() => setSelectedProject(project)}
-                      className="flex-1 px-4 py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl transition-all border border-white/10 font-medium text-sm"
+                      className="flex-1 px-4 py-3 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-gray-900 dark:text-white rounded-xl transition-all border border-black/10 dark:border-white/10 font-medium text-sm"
                     >
                       View Details
                     </button>

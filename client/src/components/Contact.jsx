@@ -41,16 +41,16 @@ const Contact = () => {
         <div className="w-full min-h-screen py-10 md:py-20 px-4 bg-transparent">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-10 md:mb-16">
-                    <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-white inline-block mb-4 drop-shadow-md">
+                    <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white inline-block mb-4 drop-shadow-md">
                         Get In Touch
                     </h2>
-                    <p className="text-cyan-200/60 mt-3 text-lg font-medium max-w-2xl mx-auto">
+                    <p className="text-cyan-600 dark:text-cyan-200/60 mt-3 text-lg font-medium max-w-2xl mx-auto">
                         Have a project in mind or want to collaborate? I'd love to hear from
                         you!
                     </p>
                 </div>
 
-                <div className="relative p-6 md:p-8 lg:p-12 rounded-3xl bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/5 shadow-2xl overflow-hidden w-full max-w-4xl mx-auto">
+                <div className="relative p-6 md:p-8 lg:p-12 rounded-3xl bg-white/80 dark:bg-[#0a0a0a]/40 backdrop-blur-xl border border-black/5 dark:border-white/5 shadow-2xl overflow-hidden w-full max-w-4xl mx-auto">
                     {/* Glow Effect */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -z-10" />
                     <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10" />
@@ -63,7 +63,7 @@ const Contact = () => {
                             <div className="space-y-2">
                                 <label
                                     htmlFor="name"
-                                    className="text-sm font-medium text-gray-400 ml-1"
+                                    className="text-sm font-medium text-gray-600 dark:text-gray-400 ml-1"
                                 >
                                     Name
                                 </label>
@@ -74,7 +74,7 @@ const Contact = () => {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 md:px-5 md:py-4 bg-white/5 border border-white/10 rounded-xl text-gray-300 placeholder-gray-600 focus:outline-none focus:border-cyan-500/50 focus:bg-cyan-900/10 transition-all duration-300"
+                                    className="w-full px-4 py-3 md:px-5 md:py-4 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl text-gray-900 dark:text-gray-300 placeholder-gray-500 dark:placeholder-gray-600 focus:outline-none focus:border-cyan-500/50 focus:bg-cyan-50 dark:focus:bg-cyan-900/10 transition-all duration-300"
                                     placeholder="John Doe"
                                 />
                             </div>
@@ -82,7 +82,7 @@ const Contact = () => {
                             <div className="space-y-2">
                                 <label
                                     htmlFor="email"
-                                    className="text-sm font-medium text-gray-400 ml-1"
+                                    className="text-sm font-medium text-gray-600 dark:text-gray-400 ml-1"
                                 >
                                     Email
                                 </label>
@@ -93,7 +93,7 @@ const Contact = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 md:px-5 md:py-4 bg-white/5 border border-white/10 rounded-xl text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300"
+                                    className="w-full px-4 py-3 md:px-5 md:py-4 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl text-gray-900 dark:text-gray-300 placeholder-gray-500 dark:placeholder-gray-600 focus:outline-none focus:border-cyan-500/50 focus:bg-cyan-50 dark:focus:bg-white/10 transition-all duration-300"
                                     placeholder="john@example.com"
                                 />
                             </div>
@@ -102,7 +102,7 @@ const Contact = () => {
                         <div className="space-y-2">
                             <label
                                 htmlFor="message"
-                                className="text-sm font-medium text-gray-400 ml-1"
+                                className="text-sm font-medium text-gray-600 dark:text-gray-400 ml-1"
                             >
                                 Message
                             </label>
@@ -113,7 +113,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 required
                                 rows={6}
-                                className="w-full px-4 py-3 md:px-5 md:py-4 bg-white/5 border border-white/10 rounded-xl text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300 resize-none"
+                                className="w-full px-4 py-3 md:px-5 md:py-4 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl text-gray-900 dark:text-gray-300 placeholder-gray-500 dark:placeholder-gray-600 focus:outline-none focus:border-cyan-500/50 focus:bg-cyan-50 dark:focus:bg-white/10 transition-all duration-300 resize-none"
                                 placeholder="Tell me about your project..."
                             />
                         </div>
@@ -213,12 +213,12 @@ const Contact = () => {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative p-4 bg-white/5 backdrop-blur-md rounded-full border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300"
+                        className="group relative p-4 bg-black/5 dark:bg-white/5 backdrop-blur-md rounded-full border border-black/10 dark:border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300"
                         aria-label={social.name}
                     >
                         <div className="absolute inset-0 bg-cyan-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         <svg
-                            className="w-6 h-6 text-gray-400 group-hover:text-cyan-300 transition-colors duration-300 relative z-10"
+                            className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors duration-300 relative z-10"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"

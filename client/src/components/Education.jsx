@@ -47,10 +47,10 @@ const Education = () => {
                                 <GraduationCap size={28} className="text-cyan-400" strokeWidth={2} />
                             </div>
                             <div className="flex-1">
-                                <h4 className="text-xl md:text-2xl font-bold text-white mb-1">
+                                <h4 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1">
                                     Secondary Education (10th Class)
                                 </h4>
-                                <p className="text-cyan-300 font-semibold text-base md:text-lg">
+                                <p className="text-cyan-600 dark:text-cyan-300 font-semibold text-base md:text-lg">
                                     CBSE Board
                                 </p>
                             </div>
@@ -58,36 +58,36 @@ const Education = () => {
                     </div>
 
                     <div className="mb-6 space-y-3">
-                        <div className="flex items-center gap-2 text-gray-300">
-                            <Award size={18} className="text-cyan-400" />
+                        <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                            <Award size={18} className="text-cyan-600 dark:text-cyan-400" />
                             <span className="font-semibold text-base md:text-lg">
                                 St. Xavier's High School
                             </span>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm md:text-base">
+                        <div className="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400 text-sm md:text-base">
                             <div className="flex items-center gap-2">
-                                <MapPin size={16} className="text-cyan-400" />
+                                <MapPin size={16} className="text-cyan-600 dark:text-cyan-400" />
                                 <span>Nagpur, Maharashtra</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Calendar size={16} className="text-cyan-400" />
+                                <Calendar size={16} className="text-cyan-600 dark:text-cyan-400" />
                                 <span>Till 2022</span>
                             </div>
                         </div>
                     </div>
 
                     <div className="space-y-2">
-                        <h5 className="text-white font-semibold text-sm md:text-base mb-3">
+                        <h5 className="text-gray-900 dark:text-white font-semibold text-sm md:text-base mb-3">
                             Key Highlights:
                         </h5>
                         <ul className="space-y-2">
-                            <li className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-400" />
+                            <li className="flex items-start gap-3 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-600 dark:bg-cyan-400" />
                                 <span>Strong academic foundation</span>
                             </li>
-                            <li className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-400" />
+                            <li className="flex items-start gap-3 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-600 dark:bg-cyan-400" />
                                 <span>Developed interest in science and technology</span>
                             </li>
                         </ul>
@@ -105,10 +105,10 @@ const Education = () => {
                                 <GraduationCap size={28} className="text-cyan-400" strokeWidth={2} />
                             </div>
                             <div className="flex-1">
-                                <h4 className="text-xl md:text-2xl font-bold text-white mb-1">
+                                <h4 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1">
                                     Higher Secondary Education (11th & 12th)
                                 </h4>
-                                <p className="text-cyan-300 font-semibold text-base md:text-lg">
+                                <p className="text-cyan-600 dark:text-cyan-300 font-semibold text-base md:text-lg">
                                     JEE Preparation
                                 </p>
                             </div>
@@ -116,36 +116,36 @@ const Education = () => {
                     </div>
 
                     <div className="mb-6 space-y-3">
-                        <div className="flex items-center gap-2 text-gray-300">
-                            <Award size={18} className="text-cyan-400" />
+                        <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                            <Award size={18} className="text-cyan-600 dark:text-cyan-400" />
                             <span className="font-semibold text-base md:text-lg">
                                 St. Paul Junior College
                             </span>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm md:text-base">
+                        <div className="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400 text-sm md:text-base">
                             <div className="flex items-center gap-2">
-                                <MapPin size={16} className="text-cyan-400" />
+                                <MapPin size={16} className="text-cyan-600 dark:text-cyan-400" />
                                 <span>Nagpur, Maharashtra</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Calendar size={16} className="text-cyan-400" />
+                                <Calendar size={16} className="text-cyan-600 dark:text-cyan-400" />
                                 <span>2022 - 2024</span>
                             </div>
                         </div>
                     </div>
 
                     <div className="space-y-2">
-                        <h5 className="text-white font-semibold text-sm md:text-base mb-3">
+                        <h5 className="text-gray-900 dark:text-white font-semibold text-sm md:text-base mb-3">
                             Key Highlights:
                         </h5>
                         <ul className="space-y-2">
-                            <li className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-400" />
+                            <li className="flex items-start gap-3 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-600 dark:bg-cyan-400" />
                                 <span>Intensive JEE preparation program</span>
                             </li>
-                            <li className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-400" />
+                            <li className="flex items-start gap-3 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-600 dark:bg-cyan-400" />
                                 <span>Strong foundation in Physics, Chemistry, and Mathematics</span>
                             </li>
                         </ul>
@@ -163,10 +163,10 @@ const Education = () => {
                                 <GraduationCap size={28} className="text-cyan-400" strokeWidth={2} />
                             </div>
                             <div className="flex-1">
-                                <h4 className="text-xl md:text-2xl font-bold text-white mb-1">
+                                <h4 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1">
                                     Bachelor of Technology (B.Tech)
                                 </h4>
-                                <p className="text-cyan-300 font-semibold text-base md:text-lg">
+                                <p className="text-cyan-600 dark:text-cyan-300 font-semibold text-base md:text-lg">
                                     Electronics and Communication Engineering
                                 </p>
                             </div>
@@ -177,20 +177,20 @@ const Education = () => {
                     </div>
 
                     <div className="mb-6 space-y-3">
-                        <div className="flex items-center gap-2 text-gray-300">
-                            <Award size={18} className="text-cyan-400" />
+                        <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                            <Award size={18} className="text-cyan-600 dark:text-cyan-400" />
                             <span className="font-semibold text-base md:text-lg">
                                 VIT-AP University
                             </span>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm md:text-base">
+                        <div className="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400 text-sm md:text-base">
                             <div className="flex items-center gap-2">
-                                <MapPin size={16} className="text-cyan-400" />
+                                <MapPin size={16} className="text-cyan-600 dark:text-cyan-400" />
                                 <span>Amaravati, Andhra Pradesh</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Calendar size={16} className="text-cyan-400" />
+                                <Calendar size={16} className="text-cyan-600 dark:text-cyan-400" />
                                 <span>2024 - 2028</span>
                             </div>
                         </div>
@@ -201,20 +201,20 @@ const Education = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <h5 className="text-white font-semibold text-sm md:text-base mb-3">
+                        <h5 className="text-gray-900 dark:text-white font-semibold text-sm md:text-base mb-3">
                             Key Highlights:
                         </h5>
                         <ul className="space-y-2">
-                            <li className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-400" />
+                            <li className="flex items-start gap-3 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-600 dark:bg-cyan-400" />
                                 <span>Specialization in Embedded Systems</span>
                             </li>
-                            <li className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-400" />
+                            <li className="flex items-start gap-3 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-600 dark:bg-cyan-400" />
                                 <span>Active member of technical clubs and societies</span>
                             </li>
-                            <li className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-400" />
+                            <li className="flex items-start gap-3 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                                <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-cyan-600 dark:bg-cyan-400" />
                                 <span>Hands-on experience with PCB Design and IoT projects</span>
                             </li>
                         </ul>
@@ -230,10 +230,10 @@ const Education = () => {
             ref={containerRef}
         >
             <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-                <h2 className="text-3xl md:text-4xl mb-4 text-white font-bold max-w-4xl">
+                <h2 className="text-3xl md:text-4xl mb-4 text-gray-900 dark:text-white font-bold max-w-4xl">
                     Education
                 </h2>
-                <p className="text-cyan-200/60 text-sm md:text-base max-w-sm">
+                <p className="text-cyan-600 dark:text-cyan-200/60 text-sm md:text-base max-w-sm">
                     Academic journey and achievements
                 </p>
             </div>
@@ -277,7 +277,7 @@ const Education = () => {
                                 <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-400">
                                     {item.title}
                                 </h3>
-                                <div className="p-6 md:p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+                                <div className="p-6 md:p-8 rounded-2xl bg-white/80 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 hover:bg-white/90 dark:hover:bg-white/10 hover:border-black/10 dark:hover:border-white/20 transition-all duration-300">
                                     {item.content}
                                 </div>
                             </div>

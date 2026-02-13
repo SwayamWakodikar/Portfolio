@@ -16,9 +16,9 @@ const Navbar = () => {
   return (
     <nav className="select-none fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-6xl z-50">
       {/* Main Pill */}
-      <div className="backdrop-blur-md bg-black/20 rounded-full flex items-center justify-between px-6 py-3 md:px-10 md:py-4 border border-white/5 shadow-lg relative z-20">
+      <div className="backdrop-blur-md bg-black/20 dark:bg-black/20 light:bg-white/80 rounded-full flex items-center justify-between px-6 py-3 md:px-10 md:py-4 border border-white/5 dark:border-white/5 light:border-black/10 shadow-lg relative z-20">
         <h1
-          className="text-lg md:text-2xl font-bold text-white cursor-default"
+          className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white cursor-default"
           onClick={e => handleSmoothScroll(e, 'About')}
         >
           Swayam Wakodikar
@@ -30,7 +30,7 @@ const Navbar = () => {
             <a
               draggable="false"
               href="#About"
-              className="text-white hover:text-cyan-400 transition-colors font-medium"
+              className="text-gray-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-medium"
               onClick={e => handleSmoothScroll(e, 'About')}
             >
               About
@@ -40,7 +40,7 @@ const Navbar = () => {
             <a
               draggable="false"
               href="#Skills"
-              className="text-white hover:text-gray-400 transition-colors font-medium"
+              className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors font-medium"
               onClick={e => handleSmoothScroll(e, 'Skills')}
             >
               Skills
@@ -50,7 +50,7 @@ const Navbar = () => {
             <a
               draggable="false"
               href="#Education"
-              className="text-white hover:text-gray-400 transition-colors font-medium"
+              className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors font-medium"
               onClick={e => handleSmoothScroll(e, 'Education')}
             >
               Education
@@ -60,7 +60,7 @@ const Navbar = () => {
             <a
               draggable="false"
               href="#Projects"
-              className="text-white hover:text-gray-400 transition-colors font-medium"
+              className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors font-medium"
               onClick={e => handleSmoothScroll(e, 'Projects')}
             >
               Projects
@@ -70,7 +70,7 @@ const Navbar = () => {
             <a
               draggable="false"
               href="#Leadership"
-              className="text-white hover:text-gray-400 transition-colors font-medium"
+              className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors font-medium"
               onClick={e => handleSmoothScroll(e, 'Leadership')}
             >
               Leadership
@@ -100,7 +100,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle Button */}
         <button
-          className="md:hidden text-white p-2 hover:bg-white/10 rounded-full transition-colors focus:outline-none"
+          className="md:hidden text-gray-900 dark:text-white p-2 hover:bg-black/10 dark:hover:bg-white/10 rounded-full transition-colors focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -118,14 +118,14 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`absolute top-full left-0 w-full mt-2 rounded-2xl bg-[#0a0a0a]/90 backdrop-blur-xl border border-white/10 shadow-2xl overflow-hidden transition-all duration-300 origin-top z-10 ${isMenuOpen ? 'opacity-100 translate-y-0 scale-y-100' : 'opacity-0 -translate-y-4 scale-y-95 pointer-events-none'}`}
+        className={`absolute top-full left-0 w-full mt-2 rounded-2xl bg-white/95 dark:bg-[#0a0a0a]/90 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl overflow-hidden transition-all duration-300 origin-top z-10 ${isMenuOpen ? 'opacity-100 translate-y-0 scale-y-100' : 'opacity-0 -translate-y-4 scale-y-95 pointer-events-none'}`}
       >
         <ul className="flex flex-col items-center py-4 space-y-4 text-sm font-medium">
           <li className="w-full text-center">
             <a
               draggable="false"
               href="#About"
-              className="block py-2 text-white hover:text-cyan-400 transition-colors"
+              className="block py-2 text-gray-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
               onClick={e => handleSmoothScroll(e, 'About')}
             >
               About
@@ -135,7 +135,7 @@ const Navbar = () => {
             <a
               draggable="false"
               href="#Skills"
-              className="block py-2 text-white hover:text-gray-400 transition-colors"
+              className="block py-2 text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               onClick={e => handleSmoothScroll(e, 'Skills')}
             >
               Skills
@@ -145,7 +145,7 @@ const Navbar = () => {
             <a
               draggable="false"
               href="#Education"
-              className="block py-2 text-white hover:text-gray-400 transition-colors"
+              className="block py-2 text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               onClick={e => handleSmoothScroll(e, 'Education')}
             >
               Education
@@ -155,7 +155,7 @@ const Navbar = () => {
             <a
               draggable="false"
               href="#Projects"
-              className="block py-2 text-white hover:text-gray-400 transition-colors"
+              className="block py-2 text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               onClick={e => handleSmoothScroll(e, 'Projects')}
             >
               Projects
@@ -165,7 +165,7 @@ const Navbar = () => {
             <a
               draggable="false"
               href="#Leadership"
-              className="block py-2 text-white hover:text-gray-400 transition-colors"
+              className="block py-2 text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
               onClick={e => handleSmoothScroll(e, 'Leadership')}
             >
               Leadership

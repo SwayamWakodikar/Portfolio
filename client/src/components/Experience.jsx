@@ -50,17 +50,17 @@ const Experience = () => {
     <div className="w-full min-h-screen py-20 px-4 bg-transparent">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold bg-linear-to-r from-green-700 to-green-900 bg-clip-text text-transparent mb-4">
+          <h2 className="text-5xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-green-700 dark:to-green-900 bg-clip-text text-transparent mb-4">
             Experience & Education
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-700 dark:text-gray-600 text-lg max-w-2xl mx-auto">
             My professional journey and educational background
           </p>
         </div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-green-300 via-green-500 to-green-300 transform md:-translate-x-1/2"></div>
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-300 via-cyan-500 to-cyan-300 dark:from-green-300 dark:via-green-500 dark:to-green-300 transform md:-translate-x-1/2"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -70,20 +70,20 @@ const Experience = () => {
                   }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-green-600 rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 z-10"></div>
+                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-cyan-600 dark:bg-green-600 rounded-full border-4 border-white dark:border-gray-900 shadow-lg transform md:-translate-x-1/2 z-10"></div>
 
                 {/* Content card */}
                 <div
                   className={`w-full md:w-5/12 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
                     }`}
                 >
-                  <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-gray-200 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+                  <div className="bg-white/90 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
                     <div className="flex items-start justify-between mb-3">
                       <div>
-                        <h3 className="text-xl font-bold text-gray-800 mb-1">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                           {exp.title}
                         </h3>
-                        <p className="text-green-700 font-semibold text-lg">
+                        <p className="text-cyan-700 dark:text-green-700 font-semibold text-lg">
                           {exp.company}
                         </p>
                       </div>
@@ -97,7 +97,7 @@ const Experience = () => {
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-4">
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -115,8 +115,8 @@ const Experience = () => {
 
                     <ul className="space-y-2">
                       {exp.description.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-gray-700">
-                          <span className="text-green-600 mt-1.5">▸</span>
+                        <li key={idx} className="flex items-start gap-2 text-gray-700 dark:text-gray-300">
+                          <span className="text-cyan-600 dark:text-green-600 mt-1.5">▸</span>
                           <span>{item}</span>
                         </li>
                       ))}
