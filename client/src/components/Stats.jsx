@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import CountUp from "./Counter/CountUp";
 import { useInView } from "framer-motion";
-import { Github, Code, Terminal } from "lucide-react";
+import { Github, Code, Trophy } from "lucide-react";
 
 const year = new Date().getFullYear();
 
@@ -24,6 +24,24 @@ const Stats = () => {
     },
     {
       id: 2,
+      title: "LeetCode Global Rank",
+      count: 0,
+      link: "https://leetcode.com/u/swayam_w06/",
+      icon: Trophy,
+      hidePlus: true,
+      prefix: "#",
+      startFrom: 1000000,
+      theme: {
+        iconRing: "group-hover:ring-yellow-500/30",
+        iconColor: "group-hover:text-yellow-300",
+        countGradient: "from-yellow-200 via-yellow-300 to-orange-400",
+        countShadow: "drop-shadow-[0_0_15px_rgba(251,191,36,0.3)]",
+        plusColor: "text-yellow-500/80",
+        accentLine: "via-yellow-500/50"
+      }
+    },
+    {
+      id: 3,
       title: `GitHub Contributions ${year}`,
       count: 230,
       link: "https://github.com/SwayamWakodikar",
@@ -70,7 +88,7 @@ const Stats = () => {
 
           setStatsData((prev) =>
             prev.map((stat) => {
-              if (stat.id === 2) return { ...stat, count: Math.floor(commitCount / 10) * 10 };
+              if (stat.id === 3) return { ...stat, count: Math.floor(commitCount / 10) * 10 };
               return stat;
             })
           );
@@ -92,6 +110,7 @@ const Stats = () => {
           setStatsData((prev) =>
             prev.map((stat) => {
               if (stat.id === 1) return { ...stat, count: Math.floor(data.totalSolved / 10) * 10 };
+              if (stat.id === 2) return { ...stat, count: data.ranking };
               return stat;
             })
           );
@@ -117,7 +136,7 @@ const Stats = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {statsData.map((statistics) => {
             const ref = useRef(null);
             const isInView = useInView(ref, {
@@ -166,17 +185,24 @@ const Stats = () => {
 
                     {/* Count */}
                     <div className="flex items-baseline gap-1">
+                      {statistics.prefix && (
+                        <span className={`text-3xl md:text-4xl font-bold ${statistics.theme.plusColor} animate-pulse mr-1`}>
+                          {statistics.prefix}
+                        </span>
+                      )}
                       <CountUp
                         key={isInView ? `${statistics.id}-visible-${statistics.count}` : `${statistics.id}-hidden`}
-                        from={0}
+                        from={statistics.startFrom || 0}
                         to={statistics.count}
                         duration={2}
                         separator=","
-                        className={`text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br ${statistics.theme.countGradient} bg-clip-text text-transparent ${statistics.theme.countShadow}`}
+                        className={`text-4xl md:text-5xl lg:text-5xl font-bold bg-gradient-to-br ${statistics.theme.countGradient} bg-clip-text text-transparent ${statistics.theme.countShadow}`}
                       />
-                      <span className={`text-3xl md:text-4xl font-bold ${statistics.theme.plusColor} animate-pulse`}>
-                        +
-                      </span>
+                      {!statistics.hidePlus && (
+                        <span className={`text-3xl md:text-4xl font-bold ${statistics.theme.plusColor} animate-pulse`}>
+                          +
+                        </span>
+                      )}
                     </div>
 
                     {/* Bottom accent line */}
