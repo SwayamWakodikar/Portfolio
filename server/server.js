@@ -13,7 +13,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/api", userRouter);
 
-
+app.get('/',(req,res)=>{
+  console.log("Responded")
+})
 app.listen(PORT, () => {
   console.log(`Server Running on port ${PORT}`);
   keepAlive("https://swayamwakodikar.vercel.app");
