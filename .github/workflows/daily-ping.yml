@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Send request to server
         run: |
-          curl -fsS https://portfolio-ayp2.onrender.com || exit 1
+          curl -fsS https://portfolio-quw1.onrender.com || exit 1
