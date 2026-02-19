@@ -14,7 +14,7 @@ app.use(express.json());
 app.use("/api", userRouter);
 
 app.get('/',(req,res)=>{
-  res.send(console.log("Responded"))
+  res.send("Responded")
 })
 app.listen(PORT, () => {
   console.log(`Server Running on port ${PORT}`);
