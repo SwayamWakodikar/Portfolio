@@ -14,9 +14,9 @@ app.use(express.json());
 app.use("/api", userRouter);
 
 app.get('/',(req,res)=>{
-  console.log("Responded")
+  res.send(console.log("Responded"))
 })
 app.listen(PORT, () => {
   console.log(`Server Running on port ${PORT}`);
-  keepAlive("https://swayamwakodikar.vercel.app");
+  keepAlive("https://portfolio-ayp2.onrender.com");
 });
