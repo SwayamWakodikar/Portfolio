@@ -11,7 +11,7 @@ const Admin = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const API_URL = 'http://localhost:5000/api'; // Update this if your production URL is different
+    const API_URL = import.meta.env.VITE_API_URL + '/api';
 
     useEffect(() => {
         // Check if session exists in local storage

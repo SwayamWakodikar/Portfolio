@@ -18,7 +18,7 @@ import { useTheme } from './context/ThemeContext';
 import Skills from './components/Skills';
 import Admin from './components/Admin';
 
-const API_URL = 'http://localhost:5000/api'; // Update for production
+const API_URL = import.meta.env.VITE_API_URL + '/api';
 
 const Home = () => {
   useEffect(() => {
