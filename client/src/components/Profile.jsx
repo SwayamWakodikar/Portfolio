@@ -11,7 +11,7 @@ const Profile = () => {
           <div className="flex flex-col items-center lg:items-start w-full lg:w-auto">
             <img
               src={assets[0]}
-              alt="Profile"
+              alt="Swayam Wakodikar - Profile Picture"
               className="h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 rounded-full object-cover border-4 border-black/10 dark:border-white/10 shadow-2xl mb-6"
             />
             <div className="text-center lg:text-left">
