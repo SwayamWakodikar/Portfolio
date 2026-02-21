@@ -20,8 +20,18 @@ import Admin from './components/Admin';
 
 const API_URL = 'http://localhost:5000/api'; // Update for production
 
-
 const Home = () => {
+  useEffect(() => {
+    const incrementViews = async () => {
+      try {
+        await axios.post(`${API_URL}/increment-views`);
+      } catch (err) {
+        console.error("Error incrementing views:", err);
+      }
+    };
+    incrementViews();
+  }, []);
+
   return (
     <div className="relative w-full overflow-x-hidden">
       <div className='select-none'>

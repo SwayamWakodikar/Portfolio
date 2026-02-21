@@ -10,6 +10,8 @@ router.post("/contact",saveContact);
 
 // Admin routes
 router.get("/admin/messages", getMessages);
+router.get("/admin/views", getViews);
+router.post("/increment-views", incrementViews);
 
 //exporting router to import this in the app.js
 export default router;

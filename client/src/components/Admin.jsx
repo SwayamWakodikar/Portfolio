@@ -5,6 +5,7 @@ import { MessageSquare, Eye, RefreshCw, LogOut, ChevronRight, User, Mail, Calend
 
 const Admin = () => {
     const [messages, setMessages] = useState([]);
+    const [views, setViews] = useState(0);
     const [loading, setLoading] = useState(true);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [password, setPassword] = useState('');
@@ -36,8 +37,12 @@ const Admin = () => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const messagesRes = await axios.get(`${API_URL}/admin/messages`);
+            const [messagesRes, viewsRes] = await Promise.all([
+                axios.get(`${API_URL}/admin/messages`),
+                axios.get(`${API_URL}/admin/views`)
+            ]);
             setMessages(messagesRes.data);
+            setViews(viewsRes.data.count || 0);
         } catch (err) {
             console.error('Error fetching data:', err);
         } finally {
@@ -112,18 +117,33 @@ const Admin = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 mb-12 text-center md:text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="p-8 rounded-3xl border border-[var(--border-color)] bg-[var(--card-bg)] backdrop-blur-md relative overflow-hidden group max-w-md"
+                    className="p-8 rounded-3xl border border-[var(--border-color)] bg-[var(--card-bg)] backdrop-blur-md relative overflow-hidden group"
                 >
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
                         <MessageSquare size={120} />
                     </div>
-                    <div className="relative z-10">
+                    <div className="relative z-10 text-center md:text-left">
                         <p className="text-[var(--text-secondary)] font-medium mb-2 uppercase tracking-wider text-sm">Total Messages</p>
                         <h3 className="text-6xl font-bold text-[var(--text-accent)]">{messages.length}</h3>
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.1 }}
+                    className="p-8 rounded-3xl border border-[var(--border-color)] bg-[var(--card-bg)] backdrop-blur-md relative overflow-hidden group"
+                >
+                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
+                        <Eye size={120} />
+                    </div>
+                    <div className="relative z-10 text-center md:text-left">
+                        <p className="text-[var(--text-secondary)] font-medium mb-2 uppercase tracking-wider text-sm">Total Views</p>
+                        <h3 className="text-6xl font-bold text-[#b486ff]">{views}</h3>
                     </div>
                 </motion.div>
             </div>
