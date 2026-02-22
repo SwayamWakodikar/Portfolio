@@ -1,6 +1,9 @@
 import { supabaseClient } from "../config/supabaseClient.js";
 import { Contact } from "../model/userModel.js";
 import nodemailer from "nodemailer";
+import dns from "dns";
+
+dns.setDefaultResultOrder("ipv4first");
 
 export const saveContact = async (req, res) => {
     try {
