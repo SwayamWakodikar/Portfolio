@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 import resumePdf from "../assets/Swayam_Wakodikar_Resume.pdf";
 
 const Contact = () => {
+    const form = useRef();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -22,18 +23,21 @@ const Contact = () => {
         e.preventDefault();
         setStatus("sending");
         try {
-            const response = await axios.post(
-                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/contact`,
-                formData
+            console.log("Template ID being used:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+            await emailjs.sendForm(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                form.current,
+                {
+                    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+                }
             );
-            if (response.status == 200 || response.status == 201) {
-                setStatus("success");
-                setFormData({ name: "", email: "", message: "" });
-                setTimeout(() => setStatus(""), 3000);
-            }
+            setStatus("success");
+            setFormData({ name: "", email: "", message: "" });
+            setTimeout(() => setStatus(""), 3000);
         } catch (error) {
             console.error("Error sending message:", error);
-            setStatus("error"); // You might want to add an error state to your UI
+            setStatus("error");
         }
     };
 
@@ -56,6 +60,7 @@ const Contact = () => {
                     <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10" />
 
                     <form
+                        ref={form}
                         onSubmit={handleSubmit}
                         className="relative z-10 space-y-6 md:space-y-8"
                     >
