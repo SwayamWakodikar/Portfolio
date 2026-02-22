@@ -13,8 +13,17 @@ const contactSchema = new mongoose.Schema({
         type: String,
         required: true,
     }
-});
+}, { timestamps: true });
 
 const Contact = mongoose.model('Contact', contactSchema);
 
-export { Contact };
+const viewsSchema = new mongoose.Schema({
+    count: {
+        type: Number,
+        default: 0
+    }
+});
+
+const Views = mongoose.model('Views', viewsSchema);
+
+export { Contact, Views };

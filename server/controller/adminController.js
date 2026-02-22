@@ -1,57 +1,46 @@
 import { supabaseClient } from "../config/supabaseClient.js";
+import { Contact, Views } from "../model/userModel.js";
 
 export const getMessages = async (req, res) => {
     try {
-        const { data, error } = await supabaseClient
-            .from('Contact')
-            .select('*')
-            .order('created_at', { ascending: false });
-        
-        if (error) throw error;
-        
-        res.status(200).json(data);
+        const messages = await Contact.find().sort({ createdAt: -1 });
+        res.status(200).json(messages);
     } catch (error) {
-        console.error("Supabase Error:", error);
+        console.error("MongoDB Error:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
 }
 
 export const getViews = async (req, res) => {
     try {
-        const { data, error } = await supabaseClient
-            .from('Views')
-            .select('*')
-            .single();
+        let viewDoc = await Views.findOne();
         
-        if (error && error.code !== 'PGRST116') throw error;
+        if (!viewDoc) {
+             viewDoc = new Views({ count: 0 });
+             await viewDoc.save();
+        }
         
-        res.status(200).json(data || { count: 0 });
+        res.status(200).json({ count: viewDoc.count });
     } catch (error) {
-        console.error("Supabase Error:", error);
+        console.error("MongoDB Error:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
 }
 
 export const incrementViews = async (req, res) => {
     try {
-        const { data: current, error: getError } = await supabaseClient
-            .from('Views')
-            .select('count')
-            .single();
+        let viewDoc = await Views.findOne();
 
-        if (getError && getError.code !== 'PGRST116') throw getError;
+        if (!viewDoc) {
+             viewDoc = new Views({ count: 1 });
+        } else {
+             viewDoc.count += 1;
+        }
 
-        const newCount = (current?.count || 0) + 1;
-
-        const { data, error } = await supabaseClient
-            .from('Views')
-            .upsert({ id: 1, count: newCount })
-            .select();
-
-        if (error) throw error;
-        res.status(200).json(data);
+        await viewDoc.save();
+        res.status(200).json({ count: viewDoc.count });
     } catch (error) {
-        console.error("Supabase Error:", error);
+        console.error("MongoDB Error:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
 }

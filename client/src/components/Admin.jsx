@@ -188,7 +188,7 @@ const Admin = () => {
                                         </div>
                                         <div className="flex items-center gap-2 text-sm text-[var(--text-secondary)] bg-[var(--bg-secondary)] px-3 py-1 rounded-full w-fit">
                                             <Calendar size={14} />
-                                            {new Date(item.created_at).toLocaleDateString()}
+                                            {new Date(item.createdAt || item.created_at || Date.now()).toLocaleDateString()}
                                         </div>
                                     </div>
                                     <div className="p-4 rounded-xl bg-[var(--bg-secondary)] text-[var(--text-primary)] leading-relaxed relative">
