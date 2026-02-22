@@ -33,24 +33,35 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Swayam Wakodikar",
-        "url": "https://swayamwakodikar.vercel.app/",
-        "jobTitle": "Student | Software Developer | Electronics Engineer",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "VIT-AP University"
-        },
-        "sameAs": [
-          "https://github.com/swayam-wakodikar",
-          "https://linkedin.com/in/swayam-wakodikar"
-        ]
+        "@type": "ProfilePage",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Swayam Wakodikar",
+          "alternateName": "Swayam",
+          "url": "https://swayamwakodikar.vercel.app/",
+          "image": "https://swayamwakodikar.vercel.app/resume.png",
+          "jobTitle": "Software Developer & Electronics Engineer",
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "VIT-AP University"
+          },
+          "description": "2nd-year ECE student at VIT-AP, Developer, and Tech Enthusiast specializing in software and hardware solutions.",
+          "sameAs": [
+            "https://github.com/swayam-wakodikar",
+            "https://linkedin.com/in/swayam-wakodikar"
+          ]
+        }
       }
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- SEO Fallback Content (Visible to bots before React loads) -->
+      <h1 style="display:none">Swayam Wakodikar - Portfolio</h1>
+      <p style="display:none">Expertise in Software Development, Electronics, and Embedded Systems. Student at VIT-AP.</p>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
 
