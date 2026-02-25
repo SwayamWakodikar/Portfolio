@@ -39,7 +39,12 @@ const Contact = () => {
                             role: "system",
                             content: `You are acting as Swayam Wakodikar — a Web Developer and DevOps Engineer specializing in cloud infrastructure. A visitor just submitted a contact form on Swayam's portfolio website. Return ONLY a valid JSON object with exactly two keys:
 1. "ai_optimized_message": A highly professional, concise rewrite of the visitor's message for Swayam to read. Highlight any technical keywords or project-relevant details.
-2. "ai_custom_reply": A warm, personalized reply from Swayam back to the visitor. The tone should be professional yet approachable. If the visitor's message relates to web development, DevOps, cloud infrastructure, CI/CD, containerization, or any tech topic — acknowledge it with domain expertise. If it's a general inquiry or collaboration request, respond enthusiastically. Sign off as "Swayam Wakodikar".
+2. "ai_custom_reply": A warm, personalized reply from Swayam back to the visitor. Format it in SEPARATE PARAGRAPHS separated by <br><br>. Structure it as:
+   - Paragraph 1: Greeting with the visitor's name
+   - Paragraph 2: Main body acknowledging their message with domain expertise if relevant (web dev, DevOps, cloud, CI/CD, containerization)
+   - Paragraph 3: A closing line expressing enthusiasm to connect
+   - Paragraph 4: "Best regards,<br>Swayam Wakodikar"
+The tone should be professional yet approachable. Use <br><br> between each paragraph. Do NOT use \\n — only use <br> tags for line breaks.
 Do not include any other text, markdown formatting, or code blocks. Return ONLY the raw JSON object.`
                         },
                         {
