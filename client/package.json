@@ -28,6 +28,7 @@
     "react-dom": "^19.1.1",
     "react-infinite-logo-slider": "^1.1.4",
     "react-router-dom": "^7.13.0",
+    "recharts": "^3.7.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.15",
     "wrangler": "^4.67.0"

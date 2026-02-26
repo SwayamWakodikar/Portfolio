@@ -38,6 +38,10 @@ const Skills = () => {
             { name: "Embedded C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/embeddedc/embeddedc-original.svg" },
             { name: "VHDL", icon: "https://api.iconify.design/mdi:chip.svg?color=%2300599C" },
         ],
+        DevOps: [
+            { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+            { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+        ],
         Tools: [
             { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
             { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", invert: true },
@@ -107,7 +111,7 @@ const Skills = () => {
                     transition-all duration-300 shadow-lg overflow-hidden "
                             >
                                 {/* Glow Effect */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <div className="absolute inset-0 bg-linear-to-br from-cyan-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                                 <div className="relative z-10 p-3 md:p-4 rounded-xl bg-black/5 dark:bg-white/5 ring-1 ring-black/10 dark:ring-white/10 group-hover:ring-cyan-500/50 transition-all duration-300">
                                     <img
