@@ -35,15 +35,29 @@ export const projects = [
       github: "https://github.com/SwayamWakodikar/Vplace.git",
       demo: "https://vplace.vercel.app"
     },
-    {
+    
+  {
   id: 4, 
   title: "Emergency Sync",
-  description: "An ML-based emergency response platform that tracks real-time vehicle availability. It dynamically monitors emergency units and automatically allots the nearest available vehicle to new emergency incidents using geolocation algorithms.",
-  tech: ["Express.js", "Node.js", "Prisma", "PostgreSQL", "Node-cron", "JavaScript", "CORS", "Dotenv"],
-  category: "ML Projects",
+  description: "A full-stack, ML-driven emergency response platform that tracks real-time vehicle availability. It dynamically monitors emergency units and automatically routes the nearest available vehicle to active incidents using geolocation algorithms. It also features a custom-trained DistilBERT NLP model deployed via FastAPI to instantly predict emergency severity from incident descriptions.",
+  tech: [
+    "React", 
+    "TypeScript", 
+    "TailwindCSS",
+    "Node.js", 
+    "Express.js", 
+    "Prisma", 
+    "PostgreSQL", 
+    "Python",
+    "FastAPI",
+    "PyTorch",
+    "Docker"
+  ],
+  category: "Full-Stack & ML Projects",
   status: "Ongoing",
-  image:EmergencySync,
-  github: "https://github.com/SwayamWakodikar/EmergencySync.git",
-  demo: "#" 
+  image: EmergencySync,
+  github: "https://github.com/SwayamWakodikar/EmergencySync",
+  demo: "https://emergency-sync.vercel.app"
 }
+
 ];
