@@ -4,43 +4,43 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: "Software Developer Intern",
-      company: "Tech Company Inc.",
+      title: "Backend Developer Intern",
+      company: "Tech Systems Solutions",
       duration: "Summer 2024",
       location: "Remote",
       description: [
-        "Developed and maintained web applications using React and Node.js",
-        "Collaborated with a team of 5 developers on agile projects",
-        "Implemented RESTful APIs and optimized database queries",
-        "Participated in code reviews and contributed to technical documentation"
+        "Architected and maintained RESTful microservices using Node.js and Express",
+        "Optimized database queries and API response times by 30% through effective indexing and caching",
+        "Implemented secure JWT-based authentication and authorization flows across distributed services",
+        "Contributed to CI/CD pipeline automation for automated testing and deployment"
       ],
       type: "work"
     },
     {
       id: 2,
-      title: "Full Stack Developer",
-      company: "Startup XYZ",
+      title: "Open Source Contributor",
+      company: "Various Projects",
       duration: "2023 - Present",
       location: "Remote",
       description: [
-        "Built scalable web applications from scratch",
-        "Integrated third-party APIs and payment gateways",
-        "Improved application performance by 40% through optimization",
-        "Mentored junior developers and conducted technical training sessions"
+        "Contributed to backend performance optimizations and bug fixes in open-source repositories",
+        "Participated in system design discussions and collaborated on infrastructure-as-code (IaC) templates",
+        "Improved documentation for API endpoints and system architectures",
+        "Mentored new contributors on best practices for backend development"
       ],
       type: "work"
     },
     {
       id: 3,
-      title: "Bachelor's in Computer Science",
-      company: "University Name",
-      duration: "2021 - 2025",
-      location: "City, Country",
+      title: "B.Tech in Electronics and Communication Engineering",
+      company: "Pimpri Chinchwad College of Engineering (PCCOE)",
+      duration: "2023 - 2027",
+      location: "Pune, India",
       description: [
-        "Relevant coursework: Data Structures, Algorithms, Database Systems",
-        "Projects: Machine Learning models, Distributed Systems",
-        "Dean's List: Fall 2022, Spring 2023",
-        "Student Organizations: Coding Club, Tech Society"
+        "Relevant Coursework: Data Structures, Operating Systems, Database Management Systems, Computer Networks",
+        "Focused on bridge between hardware and software, including Embedded Systems and Digital Logic",
+        "Active member of the Technical Coding Club and System Design Study Group",
+        "Consistently maintaining a strong academic record in core engineering subjects"
       ],
       type: "education"
     }

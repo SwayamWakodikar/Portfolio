@@ -19,10 +19,10 @@ const Profile = () => {
                 Swayam Wakodikar
               </h1>
               <div className="text-lg md:text-xl lg:text-2xl font-semibold text-cyan-600 dark:text-cyan-200/80">
-                Student | Tech Enthusiast
+                Backend Developer & DevOps Engineer
               </div>
               <div className="text-lg md:text-xl lg:text-2xl font-semibold text-cyan-600 dark:text-cyan-200/80">
-                Developer | Electronics Geek
+                System Architect | Open Source Enthusiast
               </div>
 
               <div className="flex flex-wrap gap-4 mt-6 justify-center lg:justify-start">
@@ -48,7 +48,7 @@ const Profile = () => {
 
             </div>
           </div>
-          {/* Skills Section */}
+          {/* About Section */}
           <div className="flex-1 w-full lg:w-auto text-center lg:text-left">
             <div className=" bg-transparent rounded-2xl shadow-xl p-4 md:p-8 border-none ">
               <div className="space-y-6 md:space-y-10">
@@ -58,11 +58,11 @@ const Profile = () => {
                 </h2>
 
                 <p className="text-lg md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-400/90 leading-relaxed font-light">
-                  I am a <span className="font-semibold text-gray-900 dark:text-white">2nd-year Electronics and Communication Engineering student</span> with a strong foundation in both <span className="text-cyan-600 dark:text-cyan-300">software development</span> and <span className="text-cyan-600 dark:text-cyan-300">core electronics</span>.
+                  I am an <span className="font-semibold text-gray-900 dark:text-white">ECE student</span> pivoting my career towards <span className="text-cyan-600 dark:text-cyan-300">scalable backend architectures</span> and <span className="text-cyan-600 dark:text-cyan-300">cloud-native infrastructure</span>.
                 </p>
 
                 <p className="text-lg md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-400/90 leading-relaxed font-light">
-                  I enjoy building <span className="font-semibold text-gray-900 dark:text-white">efficient software solutions</span> while also working with <span className="text-cyan-600 dark:text-cyan-300">embedded systems</span>, <span className="text-cyan-600 dark:text-cyan-300">digital logic</span>, and <span className="text-cyan-600 dark:text-cyan-300">hardware-oriented problem solving</span>.
+                  My technical foundation allows me to approach <span className="font-semibold text-gray-900 dark:text-white">software performance</span> with a deep understanding of system internals, specializing in <span className="text-cyan-600 dark:text-cyan-300">distributed systems</span>, <span className="text-cyan-600 dark:text-cyan-300">containerization</span>, and <span className="text-cyan-600 dark:text-cyan-300">DevOps automation</span>.
                 </p>
               </div>
             </div>

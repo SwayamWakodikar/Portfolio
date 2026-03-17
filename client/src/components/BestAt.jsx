@@ -1,22 +1,26 @@
-import React from "react";
-import { Zap, Target, Sparkles } from "lucide-react";
+import { Server, Cloud, Activity, Database } from "lucide-react";
 
 const BestAt = () => {
     const highlights = [
         {
             id: 1,
-            icon: Zap,
-            text: "Fast & Effective Solutions"
+            icon: Server,
+            text: "Scalable Backend Architectures"
         },
         {
             id: 2,
-            icon: Target,
-            text: "Innovative Problem Solver"
+            icon: Cloud,
+            text: "Infrastructure Automation"
         },
         {
             id: 3,
-            icon: Sparkles,
-            text: "Passionate About Technology"
+            icon: Database,
+            text: "Distributed System Design"
+        },
+        {
+            id: 4,
+            icon: Activity,
+            text: "High Performance Systems"
         }
     ];
 
