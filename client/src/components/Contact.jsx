@@ -23,63 +23,6 @@ const Contact = () => {
         e.preventDefault();
         setStatus("sending");
         try {
-            // 1. Call OpenRouter API to generate both the optimized message and custom reply
-            const aiResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
-                    "Content-Type": "application/json",
-                    "HTTP-Referer": "http://localhost:5173", // Required by OpenRouter
-                    "X-Title": "Swayam Portfolio" // Optional, but recommended by OpenRouter
-                },
-                body: JSON.stringify({
-                    model: "nvidia/nemotron-3-nano-30b-a3b:free",
-                    messages: [
-                        {
-                            role: "system",
-                            content: `You are acting as Swayam Wakodikar — a Web Developer and DevOps Engineer specializing in cloud infrastructure. A visitor just submitted a contact form on Swayam's portfolio website. Return ONLY a valid JSON object with exactly two keys:
-1. "ai_optimized_message": A highly professional, concise rewrite of the visitor's message for Swayam to read. Highlight any technical keywords or project-relevant details.
-2. "ai_custom_reply": A warm, personalized reply from Swayam back to the visitor. Format it in SEPARATE PARAGRAPHS separated by <br><br>. Structure it as:
-   - Paragraph 1: Greeting with the visitor's name
-   - Paragraph 2: Main body acknowledging their message with domain expertise if relevant (web dev, DevOps, cloud, CI/CD, containerization)
-   - Paragraph 3: A closing line expressing enthusiasm to connect
-   - Paragraph 4: "Best regards,<br>Swayam Wakodikar"
-The tone should be professional yet approachable. Use <br><br> between each paragraph. Do NOT use \\n — only use <br> tags for line breaks.
-Do not include any other text, markdown formatting, or code blocks. Return ONLY the raw JSON object.`
-                        },
-                        {
-                            role: "user",
-                            content: `Name: ${formData.name}\nMessage: ${formData.message}`
-                        }
-                    ]
-                })
-            });
-
-            if (!aiResponse.ok) {
-                const errorData = await aiResponse.text();
-                throw new Error(`OpenRouter API error: ${aiResponse.status} - ${errorData}`);
-            }
-
-            const aiData = await aiResponse.json();
-            const aiGeneratedText = aiData.choices[0].message.content;
-
-            // Safely parse the JSON response from the AI
-            let aiParsed = {
-                ai_optimized_message: formData.message,
-                ai_custom_reply: `Hi ${formData.name},\n\nThank you for reaching out! I have received your message and will get back to you as soon as possible.\n\nBest regards,\nSwayam`
-            };
-            try {
-                // Remove potential markdown blocks just in case
-                const cleanedText = aiGeneratedText.replace(/```json/g, "").replace(/```/g, "").trim();
-                aiParsed = JSON.parse(cleanedText);
-            } catch (e) {
-                console.error("Failed to parse AI response as JSON:", e);
-                console.log("Raw AI output was:", aiGeneratedText);
-            }
-
-            // 2. Send the form via EmailJS with the new AI variables
-            console.log("Template ID being used:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-
             await emailjs.send(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
                 import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -87,8 +30,8 @@ Do not include any other text, markdown formatting, or code blocks. Return ONLY 
                     name: formData.name,
                     email: formData.email,
                     message: formData.message,
-                    ai_optimized_message: aiParsed.ai_optimized_message,
-                    ai_custom_reply: aiParsed.ai_custom_reply
+                    ai_optimized_message: formData.message,
+                    ai_custom_reply: `Hi ${formData.name},\n\nThank you for reaching out! I have received your message and will get back to you as soon as possible.\n\nBest regards,\nSwayam`
                 },
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
@@ -97,7 +40,7 @@ Do not include any other text, markdown formatting, or code blocks. Return ONLY 
             setFormData({ name: "", email: "", message: "" });
             setTimeout(() => setStatus(""), 3000);
         } catch (error) {
-            console.error("Error sending message or calling AI:", error);
+            console.error("Error sending message:", error);
             setStatus("error");
         }
     };
